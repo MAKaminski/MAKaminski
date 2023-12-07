@@ -1,9 +1,5 @@
 ### Hi there 👋
 
-**MAKaminski/MAKaminski** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
 - 🔭 I’m currently working on full-stack automation project called DataSync, a project aimed at allowing entreprenuers to easily kick-start a company by handling all data and reporting needs in a lightweight, user-friendly fashion.
 - 🌱 I’m currently learning advanced cloud computing AI/ML techniques.
 - 👯 I’m looking to collaborate by learning more about non-esoteric data needs, in lowering the bar and costs affiliated with managing a business I think we can promote more competetion leading to better products for businesses and consumers alike.
