@@ -19,16 +19,28 @@ I'm a finance professional turned tech innovator, adept in melding complex proce
 ---
 
 **Front-End Development:**
-- Proficient in JavaScript, React, Vue, Tailwind, CSS, HTML.
+- <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/f8de5306-f301-46e6-87b2-f33e87f78760" width="25" height="25">,<img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/bc9ff81c-f5a0-475b-ad2d-6bafe35109f8" width="25" height="25">,<img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/7a0611fe-b829-4b08-bae9-f8f17f2bda58" width="25" height="25">,<img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/d5969be1-856a-4984-b73a-72bc9aa977a5" width="25" height="25">,<img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/3c2ab4f7-7bdd-44ff-a7f6-c21770f8b2ed" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/bd7e2f0e-04c7-4419-95ed-d94e054deffc" width="25" height="25">
 - Experienced in building dynamic, user-centric interfaces.
 - Leveraging modern frameworks for enhanced user experiences.
 
 ---
 
 **Back-End Development:**
-- Skilled in Python, SQL, VBA, Express.js, and Django.
+- <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/7af03a7d-d934-426e-994a-025ab404ba0a" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/3b13c343-9044-4569-adc8-5401d6ca80f5" width="25" height="25">, VBA, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/69683e7e-8410-47a2-a400-e88ccf83cd72" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/26486295-75a9-42f6-9c96-2c62f74dc341" width="25" height="25">, and Django.
 - Developing robust, scalable back-ends and APIs.
 - Expert in managing databases and server-side functionalities.
+
+---
+
+**Package Management & CLI Tools:**
+- <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/fdc95f14-78fe-493f-9885-9ac6dcaf97b4" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/b7493c2f-e7b3-408e-991f-60e3136a9cbf" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/815340c1-078b-440e-977a-9eb2cccd2233" width="25" height="25">
+
+---
+
+---
+
+**Exploring**
+- <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/25ec2f80-b11c-4bbc-9c56-465e56c0b6f5" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/bc60347e-8190-4595-9d49-40d7ea910107" width="25" height="25">, <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/db4710a7-3b71-4403-80cc-fc6a31c929e9" width="25" height="25">
 
 ---
 
