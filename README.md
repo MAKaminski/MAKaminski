@@ -1,3 +1,13 @@
+---
+**Github Stats**
+
+📊 GitHub Stats:
+[Show Image<br/>](https://github-readme-stats.vercel.app/api?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
+[Show Image<br/>](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=dark&hide_border=false)
+[Show Image<br/>](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+
+---
+
 ### Hi there 👋
 
 - 🔭 I’m currently working on full-stack automation project called DataSync, a project aimed at allowing entreprenuers to easily kick-start a company by handling all data and reporting needs in a lightweight, user-friendly fashion.
