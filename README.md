@@ -3,30 +3,17 @@
 
 📊 GitHub Stats:
 ---
-[Show Image<br/>](https://github-readme-stats.vercel.app/api?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
-[Show Image<br/>](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=dark&hide_border=false)
-[Show Image<br/>](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+[Show Image<br/> (https://github-readme-stats.vercel.app/api?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true)]
+[Show Image<br/> (https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=dark&hide_border=false)]
+[Show Image<br/> (https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)]
 
 ---
 
 ### Hi there 👋
-
-- 🔭 I’m currently working on full-stack automation project called DataSync, a project aimed at allowing entreprenuers to easily kick-start a company by handling all data and reporting needs in a lightweight, user-friendly fashion.
-- 🌱 I’m currently learning advanced cloud computing AI/ML techniques.
-- 👯 I’m looking to collaborate by learning more about non-esoteric data needs, in lowering the bar and costs affiliated with managing a business I think we can promote more competetion leading to better products for businesses and consumers alike.
-- 💬 Ask me about anything related to Python, automation, or general tech queries.
 - 📫 How to reach me: [MKaminski1337@gmail.com](mailto:MKaminski1337@gmail.com)
-- 😄 Pronouns: He/Him
-- ⚡ Fun fact: I started in finance and found my true calling in empowering people through education and tech innovation!
 
 ---
-
-🌐 Greetings, Tech Professionals and Enthusiasts!
-
-I'm a finance professional turned tech innovator, adept in melding complex processes with cutting-edge technology for streamlined, high-value software systems. My journey is characterized by a relentless pursuit of efficiency and innovation.
-
 **Technical Expertise:**
-
 ---
 
 **Front-End Development:**
@@ -84,7 +71,3 @@ I'm a finance professional turned tech innovator, adept in melding complex proce
 - Committed to exploring emerging technologies.
 - Adapting to evolving business needs and technological advancements.
 - Advocating for a culture of innovation and continuous improvement.
-
-I invite you to join my GitHub journey, where I share robust, scalable solutions and engage in collaborative innovation. Explore my repositories, contribute to discussions, and let's use these tools to propel your projects and processes forward.
-
-Together, let's lead the change in tech-driven business efficiency. Your insights, feedback, and collaboration are crucial for our mutual growth in this ever-evolving tech landscape.
