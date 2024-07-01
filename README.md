@@ -12,11 +12,11 @@
 📫 How to reach me: [MKaminski1337@gmail.com](mailto:MKaminski1337@gmail.com)
 
 # Active Repos
-![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=SysMemory&theme=light)
+[![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=SysMemory&theme=light)](https://github.com/MAKaminski/SysMemory)
 
 # Inactive Repos
-![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=data_analysis&theme=dark)
-![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=IconGenerator&theme=dark)
+[![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=data_analysis&theme=dark)](https://github.com/MAKaminski/data_analysis)
+[![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=IconGenerator&theme=dark)](https://github.com/MAKaminski/IconGenerator)
 
 # **Technical Expertise:**
 
