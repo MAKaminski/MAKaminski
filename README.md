@@ -2,6 +2,7 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=blueviolet)
 ![GitHub User's stars](https://img.shields.io/github/stars/MAKaminski?affiliations=OWNER%2CCOLLABORATOR&style=social)
 ![GitHub followers](https://img.shields.io/github/followers/MAKaminski?label=Follow&style=social)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/yourlinkedin)
 
 ![Total Contributions](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=dark&count_private=true&include_all_commits=true)
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=white)
@@ -9,6 +10,8 @@
 ![Commits by Hour](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=github_dark&utcOffset=-5)
 ![GitHub Repositories Stats](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=github_dark)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=white)
+[![Spotify](https://makaminski1337.vercel.app/api/spotify)](https://open.spotify.com/user/makaminski1)
+
 📫 How to reach me: [MKaminski1337@gmail.com](mailto:MKaminski1337@gmail.com)
 
 # Active Repos
