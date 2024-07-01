@@ -1,15 +1,13 @@
-
-**Github Stats**
-
 📊 GitHub Stats:
 ---
-[Show Image<br/> (https://github-readme-stats.vercel.app/api?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true)]
-[Show Image<br/> (https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=dark&hide_border=false)]
-[Show Image<br/> (https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)]
+![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=blueviolet)
 
+![Total Contributions](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=dark&count_private=true&include_all_commits=true) ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=dark)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=dark)
+
+Contact
 ---
-
-### Hi there 👋
 - 📫 How to reach me: [MKaminski1337@gmail.com](mailto:MKaminski1337@gmail.com)
 
 ---
