@@ -10,6 +10,7 @@
 ![Commits by Hour](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=github_dark&utcOffset=-5)
 ![GitHub Repositories Stats](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=github_dark)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=white)
+
 [![Spotify](https://githubspotifywidget-bbd3xlniy-makaminski1337.vercel.app/api/spotify)](https://open.spotify.com/user/makaminski1)
 
 📫 How to reach me: [MKaminski1337@gmail.com](mailto:MKaminski1337@gmail.com)
