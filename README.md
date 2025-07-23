@@ -1,58 +1,220 @@
-# 📊 Profile Activity
-![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=blueviolet)
-![GitHub User's stars](https://img.shields.io/github/stars/MAKaminski?affiliations=OWNER%2CCOLLABORATOR&style=social)
-![GitHub followers](https://img.shields.io/github/followers/MAKaminski?label=Follow&style=social)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/yourlinkedin)
+# 👋 Hi there! I'm MAKaminski
 
-![Total Contributions](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=dark&count_private=true&include_all_commits=true)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=white)
-![GitHub Profile Summary](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=github)
-![Commits by Hour](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=github_dark&utcOffset=-5)
-![GitHub Repositories Stats](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=github_dark)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=white)
+<div align="center">
+  
+  ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=9400D3&center=true&vCenter=true&width=600&lines=Data+Scientist+%26+ML+Engineer;Full-Stack+Developer;AI+Enthusiast;Problem+Solver)
+  
+  ### 🚀 Transforming data into insights, code into solutions
+  
+  ![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=blueviolet&style=for-the-badge)
+  ![GitHub User's stars](https://img.shields.io/github/stars/MAKaminski?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=gold)
+  ![GitHub followers](https://img.shields.io/github/followers/MAKaminski?label=Follow&style=for-the-badge&color=blue)
+  [![LinkedIn](https://img.shields.io/badge/-Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/yourlinkedin)
+  
+</div>
 
-# Contact
+---
+
+## 🎯 About Me
+
+```python
+class DataScientist:
+    def __init__(self):
+        self.name = "MAKaminski"
+        self.role = "Data Scientist & ML Engineer"
+        self.passions = ["Machine Learning", "Data Engineering", "Full-Stack Development"]
+        self.current_focus = "Building AI-powered solutions"
+        
+    def say_hi(self):
+        print("Thanks for dropping by! Let's build something amazing together! 🚀")
+
+me = DataScientist()
+me.say_hi()
+```
+
+🔭 **Currently working on:** AI/ML projects that make a real-world impact  
+🌱 **Learning:** Advanced MLOps, LLM fine-tuning, and distributed systems  
+💡 **Ask me about:** Data science, machine learning, Python, or any cool tech!  
+⚡ **Fun fact:** I can speak fluent SQL to databases and Python to computers  
+🎵 **Currently listening to:** 
+
 [![Spotify](https://githubspotifywidget-bbd3xlniy-makaminski1337.vercel.app/api/spotify)](https://open.spotify.com/user/makaminski1)
 
-| Semantic Category  | Description  |
-|----------------------|--------------------|
-| Frontend | <br> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/f8de5306-f301-46e6-87b2-f33e87f78760" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/bc9ff81c-f5a0-475b-ad2d-6bafe35109f8" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/7a0611fe-b829-4b08-bae9-f8f17f2bda58" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/d5969be1-856a-4984-b73a-72bc9aa977a5" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/3c2ab4f7-7bdd-44ff-a7f6-c21770f8b2ed" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/bd7e2f0e-04c7-4419-95ed-d94e054deffc" width="25" height="25"> 
-| Backend | <br> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/7af03a7d-d934-426e-994a-025ab404ba0a" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/3b13c343-9044-4569-adc8-5401d6ca80f5" width="25" height="25"> ![VBA](https://img.shields.io/badge/-VBA-217346?style=flat-square&logo=microsoft-excel) <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/69683e7e-8410-47a2-a400-e88ccf83cd72" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/26486295-75a9-42f6-9c96-2c62f74dc341" width="25" height="25"> ![Django](https://img.shields.io/badge/-Django-092E20?style=flat-square&logo=django)
-| Package Management & CLI Tools |<br> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/fdc95f14-78fe-493f-9885-9ac6dcaf97b4" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/b7493c2f-e7b3-408e-991f-60e3136a9cbf" width="25" height="25"> <img src="https://github.com/MAKaminski/MAKaminski/assets/19610881/815340c1-078b-440e-977a-9eb2cccd2233" width="25" height="25"> ![Poetry](https://img.shields.io/badge/-Poetry-60A5FA?style=flat-square&logo=poetry) ![pip](https://img.shields.io/badge/-pip-3776AB?style=flat-square&logo=pypi)
-| Libraries and Tools | ![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=flat-square&logo=scipy) ![Matplotlib](https://img.shields.io/badge/-Matplotlib-2C2D72?style=flat-square&logo=matplotlib) ![Seaborn](https://img.shields.io/badge/-Seaborn-3776AB?style=flat-square&logo=python) ![Scikit-learn](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=flat-square&logo=scikit-learn) ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow) ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter) ![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=flat-square&logo=plotly) ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi) ![Axios](https://img.shields.io/badge/-Axios-5A29E4?style=flat-square&logo=axios) ![PySpark](https://img.shields.io/badge/-PySpark-E25A1C?style=flat-square&logo=apache-spark) ![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-FF9A00?style=flat-square&logo=huggingface) ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=streamlit) | ![MLflow](https://img.shields.io/badge/-MLflow-0194E2?style=flat-square&logo=mlflow)
-| ML Concepts | ![Self-Supervised Learning](https://img.shields.io/badge/-Self--Supervised%20Learning-FF6F00?style=flat-square) ![Transfer Learning](https://img.shields.io/badge/-Transfer%20Learning-00C853?style=flat-square) ![Reinforcement Learning](https://img.shields.io/badge/-Reinforcement%20Learning-673AB7?style=flat-square) ![Transformers](https://img.shields.io/badge/-Transformers-FF6F00?style=flat-square) ![LLMs](https://img.shields.io/badge/-LLMs-00897B?style=flat-square) ![Text Embeddings](https://img.shields.io/badge/-Text%20Embeddings-3949AB?style=flat-square) ![GPT](https://img.shields.io/badge/-GPT-4285F4?style=flat-square)
-| Platforms & Services | ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazon-aws) ![GCP](https://img.shields.io/badge/-GCP-4285F4?style=flat-square&logo=google-cloud) ![Azure](https://img.shields.io/badge/-Azure-0078D4?style=flat-square&logo=microsoft-azure) ![Cloudflare](https://img.shields.io/badge/-Cloudflare-F38020?style=flat-square&logo=cloudflare) ![Vercel](https://img.shields.io/badge/-Vercel-000000?style=flat-square&logo=vercel) ![Heroku](https://img.shields.io/badge/-Heroku-430098?style=flat-square&logo=heroku)
-| ETL Pipeline Tools | ![Apache Airflow](https://img.shields.io/badge/-Apache%20Airflow-017CEE?style=flat-square&logo=apache-airflow) ![Apache NiFi](https://img.shields.io/badge/-Apache%20NiFi-003366?style=flat-square&logo=apache-nifi) ![Fivetran](https://img.shields.io/badge/-Fivetran-1F7BF6?style=flat-square&logo=fivetran) ![DBT](https://img.shields.io/badge/-DBT-FF694B?style=flat-square&logo=dbt)  ![Foreign Data Wrappers](https://img.shields.io/badge/-Foreign%20Data%20Wrappers-336791?style=flat-square) ![Encryption (PGP/GPG)](https://img.shields.io/badge/-Encryption%20(PGP%2FGPG)-336791?style=flat-square&logo=gnuprivacyguard) ![System Profiling](https://img.shields.io/badge/-System%20Profiling-336791?style=flat-square) 
-| Orchestration Tools | ![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square&logo=kubernetes) ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker)
-| Testing & Validation | ![Pydantic](https://img.shields.io/badge/-Pydantic-3776AB?style=flat-square&logo=pydantic) ![Jest](https://img.shields.io/badge/-Jest-C21325?style=flat-square&logo=jest) ![Pytest](https://img.shields.io/badge/-Pytest-0A9EDC?style=flat-square&logo=pytest) | ![Cypress](https://img.shields.io/badge/-Cypress-17202C?style=flat-square&logo=cypress)
-| Relational Databases | ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql) ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql) ![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat-square&logo=sqlite) ![MariaDB](https://img.shields.io/badge/-MariaDB-003545?style=flat-square&logo=mariadb) ![Oracle](https://img.shields.io/badge/-Oracle-F80000?style=flat-square&logo=oracle) ![Microsoft SQL Server](https://img.shields.io/badge/-Microsoft%20SQL%20Server-CC2927?style=flat-square&logo=microsoft-sql-server) ![Amazon Redshift](https://img.shields.io/badge/-Amazon%20Redshift-232F3E?style=flat-square&logo=amazon-redshift) ![Snowflake](https://img.shields.io/badge/-Snowflake-56B4E9?style=flat-square&logo=snowflake) ![BigQuery](https://img.shields.io/badge/-BigQuery-4285F4?style=flat-square&logo=google-cloud) 
-| Non-Relational Database | ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb) ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=flat-square&logo=redis) ![Cassandra](https://img.shields.io/badge/-Cassandra-1287B1?style=flat-square&logo=apache-cassandra) ![Neo4j](https://img.shields.io/badge/-Neo4j-008CC1?style=flat-square&logo=neo4j) ![Elasticsearch](https://img.shields.io/badge/-Elasticsearch-005571?style=flat-square&logo=elasticsearch) ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase) 
-| Vector Databases | ![Milvus](https://img.shields.io/badge/-Milvus-0052CC?style=flat-square&logo=milvus) ![Pinecone](https://img.shields.io/badge/-Pinecone-3399FF?style=flat-square&logo=pinecone) ![Weaviate](https://img.shields.io/badge/-Weaviate-00ADEF?style=flat-square&logo=weaviate)
-| File Formats | ![Excel](https://img.shields.io/badge/-Excel-217346?style=flat-square&logo=microsoft-excel) ![CSV](https://img.shields.io/badge/-CSV-FFD700?style=flat-square) ![Parquet](https://img.shields.io/badge/-Parquet-4D4D4D?style=flat-square) ![JSON](https://img.shields.io/badge/-JSON-000000?style=flat-square&logo=json) ![XML](https://img.shields.io/badge/-XML-FF6600?style=flat-square&logo=xml)
-| File Transfer | ![SFTP](https://img.shields.io/badge/-SFTP-003B57?style=flat-square&logo=sftp) ![FTP](https://img.shields.io/badge/-FTP-003B57?style=flat-square) ![FTPS](https://img.shields.io/badge/-FTPS-003B57?style=flat-square) | ![AWS S3](https://img.shields.io/badge/-AWS%20S3-232F3E?style=flat-square&logo=amazon-aws) ![Azure Blob Storage](https://img.shields.io/badge/-Azure%20Blob%20Storage-0078D4?style=flat-square&logo=microsoft-azure) ![Google Cloud Storage](https://img.shields.io/badge/-Google%20Cloud%20Storage-4285F4?style=flat-square&logo=google-cloud)
-| Data Processing and Parsing | ![FFmpeg](https://img.shields.io/badge/-FFmpeg-007ACC?style=flat-square&logo=ffmpeg) ![OpenCV](https://img.shields.io/badge/-OpenCV-5C3EE8?style=flat-square&logo=opencv) ![Tesseract](https://img.shields.io/badge/-Tesseract-5D5D5D?style=flat-square&logo=tesseract) ![NLTK](https://img.shields.io/badge/-NLTK-0269A3?style=flat-square&logo=nltk) ![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch) ![Dask](https://img.shields.io/badge/-Dask-EE6C4D?style=flat-square&logo=dask) | ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=flat-square&logo=pandas) | ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy)
-| CI/CD Tools | ![YAML](https://img.shields.io/badge/-YAML-FFA500?style=flat-square) ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=github-actions) 
+---
 
-📫 How to reach me: [MKaminski1337@gmail.com](mailto:MKaminski1337@gmail.com)
+## 📊 GitHub Analytics
+
+<div align="center">
+  
+  ![Total Contributions](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&count_private=true&include_all_commits=true&border_radius=10)
+  ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10)
+  
+  ![GitHub Profile Summary](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical)
+  
+  <details>
+    <summary>📈 More Detailed Stats</summary>
+    <br>
+    
+  ![Commits by Hour](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical&utcOffset=-5)
+  ![GitHub Repositories Stats](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
+  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10)
+    
+  </details>
+  
+</div>
+
+---
+
+## 🛠️ Tech Arsenal
+
+<details open>
+<summary><b>🎨 Frontend Development</b></summary>
+<br>
+
+![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+</details>
+
+<details>
+<summary><b>⚙️ Backend & APIs</b></summary>
+<br>
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Django](https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![VBA](https://img.shields.io/badge/-VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+
+</details>
+
+<details>
+<summary><b>🤖 Machine Learning & AI</b></summary>
+<br>
+
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-FF9A00?style=for-the-badge&logo=huggingface&logoColor=white)
+![MLflow](https://img.shields.io/badge/-MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
+![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+**🧠 Specialized Skills:**
+![Self-Supervised Learning](https://img.shields.io/badge/-Self--Supervised%20Learning-FF6F00?style=flat-square)
+![Transfer Learning](https://img.shields.io/badge/-Transfer%20Learning-00C853?style=flat-square)
+![Reinforcement Learning](https://img.shields.io/badge/-Reinforcement%20Learning-673AB7?style=flat-square)
+![Transformers](https://img.shields.io/badge/-Transformers-FF6F00?style=flat-square)
+![LLMs](https://img.shields.io/badge/-LLMs-00897B?style=flat-square)
+![Text Embeddings](https://img.shields.io/badge/-Text%20Embeddings-3949AB?style=flat-square)
+![GPT](https://img.shields.io/badge/-GPT-4285F4?style=flat-square)
+
+</details>
+
+<details>
+<summary><b>📊 Data Science & Analytics</b></summary>
+<br>
+
+![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/-Matplotlib-2C2D72?style=for-the-badge&logo=matplotlib&logoColor=white)
+![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+
+</details>
+
+<details>
+<summary><b>☁️ Cloud & DevOps</b></summary>
+<br>
+
+![AWS](https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![GCP](https://img.shields.io/badge/-GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Azure](https://img.shields.io/badge/-Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/-Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
+
+</details>
+
+<details>
+<summary><b>🗄️ Databases & Storage</b></summary>
+<br>
+
+**Relational:**
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Snowflake](https://img.shields.io/badge/-Snowflake-56B4E9?style=for-the-badge&logo=snowflake&logoColor=white)
+
+**NoSQL & Vector:**
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/-Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
+![Pinecone](https://img.shields.io/badge/-Pinecone-3399FF?style=for-the-badge&logo=pinecone&logoColor=white)
+
+</details>
+
+---
+
+## 🏆 Featured Projects
+
+<div align="center">
+
+### 🔥 Active Development
 
 <table>
   <tr>
-    <th># Active Repos</th>
-    <th>Inactive Repos</th>
-  </tr>
-  <tr>
     <td align="center">
       <a href="https://github.com/MAKaminski/SysMemory">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=SysMemory&theme=light" alt="SysMemory Repo Stats">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=SysMemory&theme=radical&border_radius=10" alt="SysMemory - System Memory Management Tool">
       </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/MAKaminski/data_analysis">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=data_analysis&theme=dark" alt="data_analysis Repo Stats">
-      </a>
-      <a href="https://github.com/MAKaminski/IconGenerator">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=IconGenerator&theme=dark" alt="IconGenerator Repo Stats">
-      </a>
+      <br>
+      <strong>🚀 Latest Project</strong><br>
+      <em>System memory optimization and monitoring</em>
     </td>
   </tr>
 </table>
+
+### 📦 Archive & Learning Projects
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/MAKaminski/data_analysis">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=data_analysis&theme=dark&border_radius=10" alt="Data Analysis Toolkit">
+      </a>
+      <br>
+      <em>Data science exploration and analysis</em>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MAKaminski/IconGenerator">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=IconGenerator&theme=dark&border_radius=10" alt="Icon Generator Tool">
+      </a>
+      <br>
+      <em>Automated icon generation utility</em>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 📫 Let's Connect!
+
+<div align="center">
+  
+  **Ready to collaborate on something amazing?**
+  
+  [![Email](https://img.shields.io/badge/-MKaminski1337@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:MKaminski1337@gmail.com)
+  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yourlinkedin)
+  
+  ---
+  
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontAlignY=65&desc=Let's%20build%20the%20future%20together&descAlignY=82&descAlign=center"/>
+  
+</div>
