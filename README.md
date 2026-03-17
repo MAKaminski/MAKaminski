@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=9400D3&center=true&vCenter=true&width=600&lines=Data+Scientist+%26+ML+Engineer;Full-Stack+Developer;AI+Enthusiast;Problem+Solver;iOS+Developer;Enterprise+Solutions+Architect)
+  ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=9400D3&center=true&vCenter=true&width=700&lines=Technology+Executive;Product+%26+Engineering+Leader;Fintech+%26+Analytics;Automation+Builder;Strategy+to+Execution)
   
   ### 🚀 Transforming data into insights, code into solutions
   
@@ -18,30 +18,30 @@
 ## 🎯 About Me
 
 ```python
-class DataScientist:
+class Profile:
     def __init__(self):
         self.name = "MAKaminski"
-        self.role = "Data Scientist & ML Engineer"
-        self.passions = ["Machine Learning", "Data Engineering", "Full-Stack Development", "iOS Development"]
-        self.current_focus = "Building AI-powered solutions"
+        self.role = "Technology Executive & Product/Engineering Leader"
+        self.passions = ["Fintech", "Product Strategy", "Data & Analytics", "Automation"]
+        self.current_focus = "Building data-driven products and automation systems"
         self.favorite_ide = "VS Code + AI tooling"
-        self.experience = {
-            "enterprise": ["FuboTV - tvOS Engineering Manager", "Stationhead - Lead iOS Developer"],
-            "innovation": ["Sonad - FFT/DSP Audio Processing", "Veil of Ignorance - Strategy Game"],
-            "social_impact": ["Spotfund - Micro-donations Platform", "Parkarr - Community Parking"]
+        self.background = {
+            "location": "Atlanta, GA",
+            "leadership": ["Technology Strategy", "Product & Engineering Execution", "Finance + Analytics"],
+            "focus_areas": ["Fintech", "Automation", "Data Platforms", "Applied AI"]
         }
         
     def say_hi(self):
         print("Thanks for dropping by! Let's build something amazing together! 🚀")
         print(f"Coding with {self.favorite_ide} ✨")
 
-me = DataScientist()
+me = Profile()
 me.say_hi()
 ```
 
-🔭 **Currently working on:** AI/ML projects that make a real-world impact  
-🌱 **Learning:** Advanced MLOps, LLM fine-tuning, and distributed systems  
-💡 **Ask me about:** Data science, machine learning, Python, iOS development, or any cool tech!  
+🔭 **Currently working on:** Fintech, analytics, and automation projects  
+🌱 **Learning:** Applied AI patterns for business and product systems  
+💡 **Ask me about:** Product strategy, engineering execution, data platforms, and automation  
 ⚡ **Fun fact:** I can speak fluent SQL to databases and Python to computers  
 🎵 **Music:** [Open Spotify profile](https://open.spotify.com/user/makaminski1)
 
@@ -215,97 +215,31 @@ me.say_hi()
   </tr>
 </table>
 
-### 📱 Professional Experience Projects
+### 🧭 Background Snapshot
+
+_Based on your public profile context (website + LinkedIn + GitHub):_
+
+- Technology executive focused on strategy through execution
+- Core areas: fintech, product, analytics, and engineering leadership
+- Based in Atlanta, GA
+
+### 🗂️ Selected Public GitHub Projects
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <h4>🏢 Enterprise & Streaming</h4>
+    <td align="center">
+      <a href="https://github.com/MAKaminski/alpha-gen-trading">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=alpha-gen-trading&theme=dark&border_radius=10" alt="alpha-gen-trading">
+      </a>
       <br>
-      <strong>FuboTV</strong> (Sep 2018 - Present)<br>
-      <em>Senior Engineering Manager & Tech Lead</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-tvOS-000000?style=flat-square&logo=apple&logoColor=white" alt="tvOS badge" />
-      <br>
-      <sub>Sports-first virtual MVPD platform</sub>
+      <em>Trading automation and real-time strategy tooling</em>
     </td>
-    <td align="center" width="50%">
-      <h4>🎵 Social Media & Music</h4>
+    <td align="center">
+      <a href="https://github.com/MAKaminski/real-estate-investment-analysis">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=real-estate-investment-analysis&theme=dark&border_radius=10" alt="real-estate-investment-analysis">
+      </a>
       <br>
-      <strong>Stationhead</strong> (Aug 2017 - Aug 2018)<br>
-      <em>Lead iOS Developer</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-iOS-007AFF?style=flat-square&logo=ios&logoColor=white" alt="iOS badge" />
-      <br>
-      <sub>Real-time social radio platform</sub>
-    </td>
-  </tr>
-</table>
-
-### 🚀 Innovation & Social Impact
-
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <h4>🔊 Audio Innovation</h4>
-      <br>
-      <strong>Sonad</strong><br>
-      <em>Developer, Co-designer, Database Architect</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-FFT-9C27B0?style=flat-square" alt="FFT badge" />
-      <img src="https://img.shields.io/badge/-DSP-FF5722?style=flat-square" alt="DSP badge" />
-      <br>
-      <sub>Shazam meets RetailMeNot using FFT/DSP</sub>
-    </td>
-    <td align="center" width="33%">
-      <h4>🎲 Strategy Gaming</h4>
-      <br>
-      <strong>Veil of Ignorance</strong><br>
-      <em>All Roles</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-Game_Dev-FF6B35?style=flat-square" alt="Game development badge" />
-      <img src="https://img.shields.io/badge/-AI-00C853?style=flat-square" alt="AI badge" />
-      <br>
-      <sub>Political philosophy strategy game</sub>
-    </td>
-    <td align="center" width="33%">
-      <h4>🅿️ Community Solutions</h4>
-      <br>
-      <strong>Parkarr</strong><br>
-      <em>Developer, Co-designer, Database Architect</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-Parse-249EDA?style=flat-square" alt="Parse badge" />
-      <img src="https://img.shields.io/badge/-MapKit-007AFF?style=flat-square" alt="MapKit badge" />
-      <br>
-      <sub>Fast Company 2017 World Changing Ideas Finalist</sub>
-    </td>
-  </tr>
-</table>
-
-### 💡 Entrepreneurial Ventures
-
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <h4>💰 Micro-Donations Platform</h4>
-      <br>
-      <strong>Spotfund</strong> (Mar 2016 - Nov 2016)<br>
-      <em>Lead Developer</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-Social_Impact-4CAF50?style=flat-square" alt="Social impact badge" />
-      <br>
-      <sub>Democratizing giving with $1-3 cap donations</sub>
-    </td>
-    <td align="center" width="50%">
-      <h4>🧠 Mental Health Tech</h4>
-      <br>
-      <strong>Welli</strong> (Sep 2015 - Oct 2015)<br>
-      <em>All Roles</em><br>
-      <br>
-      <img src="https://img.shields.io/badge/-Mental_Health-FF9800?style=flat-square" alt="Mental health badge" />
-      <img src="https://img.shields.io/badge/-Touch_ID-000000?style=flat-square" alt="Touch ID badge" />
-      <br>
-      <sub>Positive psychology tools suite</sub>
+      <em>Investment return modeling and analytics workflows</em>
     </td>
   </tr>
 </table>
@@ -339,10 +273,10 @@ me.say_hi()
 
 | Domain | Focus Areas |
 |---|---|
-| Data Science & ML | Python, TensorFlow/PyTorch, MLOps/MLflow, LLMs, FFT/DSP |
-| Full-Stack Development | React/Vue, Node.js, FastAPI/Django, PostgreSQL/MongoDB |
-| Mobile Development | iOS/Swift, tvOS, Android, Real-time App Experiences |
-| Enterprise Solutions | Team Leadership, Architecture, Performance, Scalability |
+| Leadership & Strategy | Technology roadmap, product prioritization, execution management |
+| Product & Engineering | Full-stack delivery, system design, platform operations |
+| Data & Automation | Analytics pipelines, reporting workflows, applied AI |
+| Fintech & Business Systems | Trading tooling, investment analysis, decision-support systems |
 
 ---
 
@@ -375,6 +309,7 @@ _Project and impact highlights are summarized above under Featured Projects & Po
   **Ready to collaborate on something amazing?**
   
   [![Email](https://img.shields.io/badge/-MKaminski1337@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:MKaminski1337@gmail.com)
+  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/michaelxaxkaminski)
   [![Website](https://img.shields.io/badge/-Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://michael-kaminski.io)
   
   ### 📊 Real-time Activity
