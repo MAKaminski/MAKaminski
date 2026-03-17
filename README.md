@@ -19,12 +19,12 @@
 
 <div align="center">
 
-![Total Page Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_total&query=%24.value&label=Total%20Page%20Views&style=for-the-badge&color=6f42c1)
-![Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Freal_human_page_views&query=%24.value&label=Real%20Human%20Views&style=for-the-badge&color=0e8a16)
-![AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_ai&query=%24.value&label=AI%20Views&style=for-the-badge&color=d73a49)
-![Human Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb)
-![AI Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500)
-![Feature Uses Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df)
+[![Total Page Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_total&query=%24.value&label=Total%20Page%20Views&style=for-the-badge&color=6f42c1)](#calc-profile-conversion)
+[![Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Freal_human_page_views&query=%24.value&label=Real%20Human%20Views&style=for-the-badge&color=0e8a16)](#calc-profile-conversion)
+[![AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_ai&query=%24.value&label=AI%20Views&style=for-the-badge&color=d73a49)](#calc-profile-conversion)
+[![Human Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb)](#calc-profile-conversion)
+[![AI Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500)](#calc-profile-conversion)
+[![Feature Uses Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df)](#calc-profile-conversion)
 
 _Conversion rates are calculated live in the interactive feature (overall, human, and AI)._
 
@@ -36,20 +36,162 @@ _Conversion rates are calculated live in the interactive feature (overall, human
 
 <div align="center">
 
-![Portfolio Views Total](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1)
-![Portfolio Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16)
-![Portfolio AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_ai&query=%24.value&label=Portfolio%20AI%20Views&style=for-the-badge&color=d73a49)
-![Portfolio Clicks Human](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_human&query=%24.value&label=Portfolio%20Clicks%20(Human)&style=for-the-badge&color=1f6feb)
-![Portfolio Clicks AI](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_ai&query=%24.value&label=Portfolio%20Clicks%20(AI)&style=for-the-badge&color=fb8500)
-![Portfolio Clicks Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df)
+[![Portfolio Views Total](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1)](#calc-portfolio-conversion)
+[![Portfolio Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16)](#calc-portfolio-conversion)
+[![Portfolio AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_ai&query=%24.value&label=Portfolio%20AI%20Views&style=for-the-badge&color=d73a49)](#calc-portfolio-conversion)
+[![Portfolio Clicks Human](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_human&query=%24.value&label=Portfolio%20Clicks%20(Human)&style=for-the-badge&color=1f6feb)](#calc-portfolio-conversion)
+[![Portfolio Clicks AI](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_ai&query=%24.value&label=Portfolio%20Clicks%20(AI)&style=for-the-badge&color=fb8500)](#calc-portfolio-conversion)
+[![Portfolio Clicks Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df)](#calc-portfolio-conversion)
 
-![lace-luxx.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_lace_luxx_com_views_total&query=%24.value&label=lace--luxx.com%20Views&style=flat-square&color=7c3aed)
-![modular-equity.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_modular_equity_com_views_total&query=%24.value&label=modular--equity.com%20Views&style=flat-square&color=2563eb)
-![michael-kaminski.io Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_michael_kaminski_io_views_total&query=%24.value&label=michael--kaminski.io%20Views&style=flat-square&color=0f766e)
+[![lace-luxx.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_lace_luxx_com_views_total&query=%24.value&label=lace--luxx.com%20Views&style=flat-square&color=7c3aed)](#calc-site-conversion)
+[![modular-equity.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_modular_equity_com_views_total&query=%24.value&label=modular--equity.com%20Views&style=flat-square&color=2563eb)](#calc-site-conversion)
+[![michael-kaminski.io Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_michael_kaminski_io_views_total&query=%24.value&label=michael--kaminski.io%20Views&style=flat-square&color=0f766e)](#calc-site-conversion)
 
 _Per-site and portfolio conversion rates are calculated in the Website View Intelligence feature._
 
 </div>
+
+---
+
+## 🧮 Embedded Calculator Logic (on GitHub page)
+
+<a id="calc-profile-conversion"></a>
+### Profile conversion calculator code
+
+```javascript
+function conversionRate(clicksBoth, pageViewsTotal) {
+  if (!pageViewsTotal) return 0;
+  return (clicksBoth / pageViewsTotal) * 100;
+}
+
+function segmentedProfileRates(clicksHuman, clicksAI, realHumanViews, aiViews) {
+  return {
+    humanCR: realHumanViews ? (clicksHuman / realHumanViews) * 100 : 0,
+    aiCR: aiViews ? (clicksAI / aiViews) * 100 : 0
+  };
+}
+```
+
+<a id="calc-portfolio-conversion"></a>
+### Portfolio conversion calculator code
+
+```javascript
+function portfolioRate(portfolioClicksBoth, portfolioViewsTotal) {
+  if (!portfolioViewsTotal) return 0;
+  return (portfolioClicksBoth / portfolioViewsTotal) * 100;
+}
+
+function segmentedPortfolioRates(portfolioClicksHuman, portfolioClicksAI, portfolioRealHumanViews, portfolioAIViews) {
+  return {
+    humanCR: portfolioRealHumanViews ? (portfolioClicksHuman / portfolioRealHumanViews) * 100 : 0,
+    aiCR: portfolioAIViews ? (portfolioClicksAI / portfolioAIViews) * 100 : 0
+  };
+}
+```
+
+<a id="calc-site-conversion"></a>
+### Per-site conversion calculator code
+
+```javascript
+function siteRates(siteClicksBoth, siteViewsTotal, siteClicksHuman, siteRealHumanViews, siteClicksAI, siteAIViews) {
+  return {
+    totalCR: siteViewsTotal ? (siteClicksBoth / siteViewsTotal) * 100 : 0,
+    humanCR: siteRealHumanViews ? (siteClicksHuman / siteRealHumanViews) * 100 : 0,
+    aiCR: siteAIViews ? (siteClicksAI / siteAIViews) * 100 : 0
+  };
+}
+```
+
+> Data key storage is documented below in **Tracker Storage Key Maps**.
+
+---
+
+## 🧱 Tracker Storage Key Maps
+
+<a id="profile-views-key-map"></a>
+### Profile tracker view storage (namespace `makaminski_profile_interactions_v2`)
+
+```txt
+Saved at: https://abacus.jasoncameron.dev/get/makaminski_profile_interactions_v2/<key>
+
+page_views_total
+page_views_human
+page_views_ai
+real_human_page_views
+```
+
+<a id="profile-clicks-key-map"></a>
+### Profile tracker click storage (namespace `makaminski_profile_interactions_v2`)
+
+```txt
+Saved at: https://abacus.jasoncameron.dev/get/makaminski_profile_interactions_v2/<key>
+
+clicks_human
+clicks_ai
+clicks_both
+```
+
+<a id="portfolio-views-key-map"></a>
+### Portfolio website view storage (namespace `makaminski_site_views_v1`)
+
+```txt
+Saved at: https://abacus.jasoncameron.dev/get/makaminski_site_views_v1/<key>
+
+portfolio_views_total
+portfolio_views_human
+portfolio_views_ai
+portfolio_real_human_views
+```
+
+<a id="portfolio-clicks-key-map"></a>
+### Portfolio website click storage (namespace `makaminski_site_views_v1`)
+
+```txt
+Saved at: https://abacus.jasoncameron.dev/get/makaminski_site_views_v1/<key>
+
+portfolio_clicks_human
+portfolio_clicks_ai
+portfolio_clicks_both
+```
+
+<a id="site-lace-luxx-key-map"></a>
+### lace-luxx.com key storage
+
+```txt
+site_lace_luxx_com_views_total
+site_lace_luxx_com_views_human
+site_lace_luxx_com_views_ai
+site_lace_luxx_com_real_human_views
+site_lace_luxx_com_clicks_human
+site_lace_luxx_com_clicks_ai
+site_lace_luxx_com_clicks_both
+```
+
+<a id="site-modular-equity-key-map"></a>
+### modular-equity.com key storage
+
+```txt
+site_modular_equity_com_views_total
+site_modular_equity_com_views_human
+site_modular_equity_com_views_ai
+site_modular_equity_com_real_human_views
+site_modular_equity_com_clicks_human
+site_modular_equity_com_clicks_ai
+site_modular_equity_com_clicks_both
+```
+
+<a id="site-michael-kaminski-key-map"></a>
+### michael-kaminski.io key storage
+
+```txt
+site_michael_kaminski_io_views_total
+site_michael_kaminski_io_views_human
+site_michael_kaminski_io_views_ai
+site_michael_kaminski_io_real_human_views
+site_michael_kaminski_io_clicks_human
+site_michael_kaminski_io_clicks_ai
+site_michael_kaminski_io_clicks_both
+```
 
 ---
 
@@ -124,19 +266,18 @@ me.say_hi()
       <td align="left" width="55%">
         <h4>Click-to-Track Interactive Feature</h4>
         <p>
-          Track page views and feature clicks segmented by <b>human</b>, <b>AI</b>, and <b>both</b>,
-          with live conversion-rate calculations.
+          This metric board is embedded directly on GitHub via live badges and calculator code blocks.
+          (No separate subpage required for core tracking data.)
         </p>
         <p>
-          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/cursor/dashboard-data-accuracy-f6d3/feature/index.html"><b>Open Interactive Lab (current branch)</b></a><br>
-          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/main/feature/index.html">Open Interactive Lab (main branch)</a>
+          <a href="#calc-profile-conversion"><b>Jump to profile calculator code</b></a>
         </p>
       </td>
       <td align="left" width="45%">
         <h4>Tracker Beside Feature</h4>
-        <img alt="Feature uses both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df" /><br>
-        <img alt="Human clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb" /><br>
-        <img alt="AI clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500" />
+        <a href="#calc-profile-conversion"><img alt="Feature uses both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df" /></a><br>
+        <a href="#calc-profile-conversion"><img alt="Human clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb" /></a><br>
+        <a href="#calc-profile-conversion"><img alt="AI clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500" /></a>
       </td>
     </tr>
   </table>
@@ -157,14 +298,14 @@ me.say_hi()
           Includes segmentation for total vs real-human vs AI and conversion rates.
         </p>
         <p>
-          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/cursor/dashboard-data-accuracy-f6d3/feature/index.html"><b>Open Website View Intelligence Lab</b></a>
+          <a href="#calc-site-conversion"><b>Jump to per-site calculator code</b></a>
         </p>
       </td>
       <td align="left" width="45%">
         <h4>Tracker Beside Feature</h4>
-        <img alt="Portfolio views total" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1" /><br>
-        <img alt="Portfolio clicks both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df" /><br>
-        <img alt="Portfolio real human views" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16" />
+        <a href="#calc-portfolio-conversion"><img alt="Portfolio views total" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1" /></a><br>
+        <a href="#calc-portfolio-conversion"><img alt="Portfolio clicks both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df" /></a><br>
+        <a href="#calc-portfolio-conversion"><img alt="Portfolio real human views" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16" /></a>
       </td>
     </tr>
   </table>

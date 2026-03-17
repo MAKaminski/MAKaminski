@@ -130,6 +130,39 @@
       table.metrics th {
         background: #0f1525;
       }
+      .chart-controls {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      @media (max-width: 780px) {
+        .chart-controls {
+          grid-template-columns: 1fr;
+        }
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .field label {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .field select {
+        background: #0f1525;
+        border: 1px solid var(--border);
+        color: var(--text);
+        border-radius: 8px;
+        padding: 8px;
+      }
+      .chart-wrap {
+        background: #0f1525;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
@@ -225,6 +258,42 @@
       </div>
 
       <div class="panel">
+        <h2>Charted Interface</h2>
+        <p class="muted">
+          Plot tracked data using predefined chart modes and chart types.
+        </p>
+        <div class="chart-controls">
+          <div class="field">
+            <label for="chart-preset">Preset</label>
+            <select id="chart-preset">
+              <option value="profile_overview">Profile Overview</option>
+              <option value="profile_segment_split">Profile Human vs AI Split</option>
+              <option value="portfolio_overview">Portfolio Overview</option>
+              <option value="portfolio_segment_split">Portfolio Human vs AI Split</option>
+              <option value="site_views">Per-Site Views</option>
+              <option value="site_conversion">Per-Site Conversion</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="chart-type">Chart Type</label>
+            <select id="chart-type">
+              <option value="bar">Bar</option>
+              <option value="line">Line</option>
+              <option value="radar">Radar</option>
+              <option value="doughnut">Doughnut</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>&nbsp;</label>
+            <button id="chart-refresh" class="btn">Refresh Chart Data</button>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="metrics-chart" height="120"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
         <h3>Tracking Notes</h3>
         <ul class="muted">
           <li>Real human page views are approximated using a browser-local viewer ID plus user-agent classification.</li>
@@ -234,6 +303,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       const NS = "makaminski_profile_interactions_v2";
       const SITE_NS = "makaminski_site_views_v1";
@@ -269,6 +339,10 @@
 
       let viewerType = "human";
       let isNewHuman = false;
+      let latestProfileMetrics = null;
+      let latestPortfolioMetrics = null;
+      let latestSiteStats = [];
+      let metricsChart = null;
 
       async function hit(key, namespace = NS) {
         const res = await fetch(`${API}/hit/${namespace}/${key}`);
@@ -341,6 +415,17 @@
         const crTotal = toPct(clicksBoth, pvTotal);
         const crHuman = toPct(clicksHuman, pvHumanReal);
         const crAI = toPct(clicksAI, pvAI);
+        latestProfileMetrics = {
+          pvTotal,
+          pvHumanReal,
+          pvAI,
+          clicksHuman,
+          clicksAI,
+          clicksBoth,
+          crTotal,
+          crHuman,
+          crAI
+        };
 
         setText("pv-total", pvTotal);
         setText("pv-human-real", pvHumanReal);
@@ -352,6 +437,7 @@
         setText("cr-total", fmtPct(crTotal));
         setText("cr-human", fmtPct(crHuman));
         setText("cr-ai", fmtPct(crAI));
+        renderMetricsChart();
       }
 
       async function trackPortfolioSiteView(site) {
@@ -395,6 +481,17 @@
         const crTotal = toPct(clicksBoth, viewsTotal);
         const crHuman = toPct(clicksHuman, viewsHumanReal);
         const crAI = toPct(clicksAI, viewsAI);
+        latestPortfolioMetrics = {
+          viewsTotal,
+          viewsHumanReal,
+          viewsAI,
+          clicksHuman,
+          clicksAI,
+          clicksBoth,
+          crTotal,
+          crHuman,
+          crAI
+        };
         setText("portfolio-cr-total", fmtPct(crTotal));
         setText("portfolio-cr-segments", `${fmtPct(crHuman)} / ${fmtPct(crAI)}`);
 
@@ -452,6 +549,224 @@
           </table>
         `;
         document.getElementById("site-metrics").innerHTML = metricsHtml;
+        latestSiteStats = siteStats;
+        renderMetricsChart();
+      }
+
+      function chartPalette(index) {
+        const colors = [
+          "rgba(111, 66, 193, 0.85)",
+          "rgba(14, 138, 22, 0.85)",
+          "rgba(215, 58, 73, 0.85)",
+          "rgba(31, 111, 235, 0.85)",
+          "rgba(251, 133, 0, 0.85)",
+          "rgba(130, 80, 223, 0.85)"
+        ];
+        return colors[index % colors.length];
+      }
+
+      function withScales(type) {
+        if (type === "bar" || type === "line") {
+          return {
+            x: { ticks: { color: "#a8b1c9" }, grid: { color: "#2c3753" } },
+            y: { ticks: { color: "#a8b1c9" }, grid: { color: "#2c3753" } }
+          };
+        }
+        if (type === "radar") {
+          return {
+            r: {
+              angleLines: { color: "#2c3753" },
+              grid: { color: "#2c3753" },
+              pointLabels: { color: "#a8b1c9" },
+              ticks: { color: "#a8b1c9", backdropColor: "transparent" }
+            }
+          };
+        }
+        return {};
+      }
+
+      function buildPreset() {
+        const preset = document.getElementById("chart-preset").value;
+        const type = document.getElementById("chart-type").value;
+        if (!latestProfileMetrics || !latestPortfolioMetrics) return null;
+
+        if (preset === "profile_overview") {
+          return {
+            type,
+            title: "Profile Overview (Views vs Clicks)",
+            labels: ["Total Views", "Real Human Views", "AI Views", "Clicks (Both)"],
+            datasets: [{
+              label: "Count",
+              data: [
+                latestProfileMetrics.pvTotal,
+                latestProfileMetrics.pvHumanReal,
+                latestProfileMetrics.pvAI,
+                latestProfileMetrics.clicksBoth
+              ],
+              backgroundColor: [chartPalette(0), chartPalette(1), chartPalette(2), chartPalette(5)],
+              borderColor: [chartPalette(0), chartPalette(1), chartPalette(2), chartPalette(5)],
+              borderWidth: 1
+            }]
+          };
+        }
+
+        if (preset === "profile_segment_split") {
+          return {
+            type,
+            title: "Profile Human vs AI Split",
+            labels: ["Human", "AI"],
+            datasets: [
+              {
+                label: "Views",
+                data: [latestProfileMetrics.pvHumanReal, latestProfileMetrics.pvAI],
+                backgroundColor: [chartPalette(1), chartPalette(2)],
+                borderColor: [chartPalette(1), chartPalette(2)],
+                borderWidth: 1
+              },
+              {
+                label: "Clicks",
+                data: [latestProfileMetrics.clicksHuman, latestProfileMetrics.clicksAI],
+                backgroundColor: [chartPalette(3), chartPalette(4)],
+                borderColor: [chartPalette(3), chartPalette(4)],
+                borderWidth: 1
+              }
+            ]
+          };
+        }
+
+        if (preset === "portfolio_overview") {
+          return {
+            type,
+            title: "Portfolio Overview (Views vs Clicks)",
+            labels: ["Total Views", "Real Human Views", "AI Views", "Clicks (Both)"],
+            datasets: [{
+              label: "Count",
+              data: [
+                latestPortfolioMetrics.viewsTotal,
+                latestPortfolioMetrics.viewsHumanReal,
+                latestPortfolioMetrics.viewsAI,
+                latestPortfolioMetrics.clicksBoth
+              ],
+              backgroundColor: [chartPalette(0), chartPalette(1), chartPalette(2), chartPalette(5)],
+              borderColor: [chartPalette(0), chartPalette(1), chartPalette(2), chartPalette(5)],
+              borderWidth: 1
+            }]
+          };
+        }
+
+        if (preset === "portfolio_segment_split") {
+          return {
+            type,
+            title: "Portfolio Human vs AI Split",
+            labels: ["Human", "AI"],
+            datasets: [
+              {
+                label: "Views",
+                data: [latestPortfolioMetrics.viewsHumanReal, latestPortfolioMetrics.viewsAI],
+                backgroundColor: [chartPalette(1), chartPalette(2)],
+                borderColor: [chartPalette(1), chartPalette(2)],
+                borderWidth: 1
+              },
+              {
+                label: "Clicks",
+                data: [latestPortfolioMetrics.clicksHuman, latestPortfolioMetrics.clicksAI],
+                backgroundColor: [chartPalette(3), chartPalette(4)],
+                borderColor: [chartPalette(3), chartPalette(4)],
+                borderWidth: 1
+              }
+            ]
+          };
+        }
+
+        if (preset === "site_views") {
+          return {
+            type,
+            title: "Per-Site Views",
+            labels: latestSiteStats.map((s) => s.site.domain),
+            datasets: [
+              {
+                label: "Views Total",
+                data: latestSiteStats.map((s) => s.sViewsTotal),
+                backgroundColor: chartPalette(0),
+                borderColor: chartPalette(0),
+                borderWidth: 1
+              },
+              {
+                label: "Real Human Views",
+                data: latestSiteStats.map((s) => s.sHumanReal),
+                backgroundColor: chartPalette(1),
+                borderColor: chartPalette(1),
+                borderWidth: 1
+              },
+              {
+                label: "AI Views",
+                data: latestSiteStats.map((s) => s.sAI),
+                backgroundColor: chartPalette(2),
+                borderColor: chartPalette(2),
+                borderWidth: 1
+              }
+            ]
+          };
+        }
+
+        return {
+          type,
+          title: "Per-Site Conversion Rates (%)",
+          labels: latestSiteStats.map((s) => s.site.domain),
+          datasets: [
+            {
+              label: "CR Total",
+              data: latestSiteStats.map((s) => s.sCrTotal),
+              backgroundColor: chartPalette(0),
+              borderColor: chartPalette(0),
+              borderWidth: 1
+            },
+            {
+              label: "CR Human",
+              data: latestSiteStats.map((s) => s.sCrHuman),
+              backgroundColor: chartPalette(1),
+              borderColor: chartPalette(1),
+              borderWidth: 1
+            },
+            {
+              label: "CR AI",
+              data: latestSiteStats.map((s) => s.sCrAI),
+              backgroundColor: chartPalette(2),
+              borderColor: chartPalette(2),
+              borderWidth: 1
+            }
+          ]
+        };
+      }
+
+      function renderMetricsChart() {
+        const canvas = document.getElementById("metrics-chart");
+        if (!canvas || !window.Chart) return;
+        const preset = buildPreset();
+        if (!preset) return;
+
+        if (metricsChart) metricsChart.destroy();
+        metricsChart = new Chart(canvas, {
+          type: preset.type,
+          data: {
+            labels: preset.labels,
+            datasets: preset.datasets
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                labels: { color: "#e8ecf8" }
+              },
+              title: {
+                display: true,
+                text: preset.title,
+                color: "#e8ecf8"
+              }
+            },
+            scales: withScales(preset.type)
+          }
+        });
       }
 
       async function recordSiteClick(site) {
@@ -518,6 +833,13 @@
         renderSiteButtons();
         await refreshPortfolioTracker();
         document.getElementById("feature-btn").addEventListener("click", onFeatureClick);
+        document.getElementById("chart-preset").addEventListener("change", renderMetricsChart);
+        document.getElementById("chart-type").addEventListener("change", renderMetricsChart);
+        document.getElementById("chart-refresh").addEventListener("click", async () => {
+          await refresh();
+          await refreshPortfolioTracker();
+        });
+        renderMetricsChart();
       }
 
       init().catch((err) => {
