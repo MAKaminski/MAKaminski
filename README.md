@@ -43,9 +43,7 @@ me.say_hi()
 🌱 **Learning:** Advanced MLOps, LLM fine-tuning, and distributed systems  
 💡 **Ask me about:** Data science, machine learning, Python, iOS development, or any cool tech!  
 ⚡ **Fun fact:** I can speak fluent SQL to databases and Python to computers  
-🎵 **Currently listening to:** 
-
-[![Spotify](https://githubspotifywidget-bbd3xlniy-makaminski1337.vercel.app/api/spotify)](https://open.spotify.com/user/makaminski1)
+🎵 **Music:** [Open Spotify profile](https://open.spotify.com/user/makaminski1)
 
 ---
 
@@ -55,7 +53,7 @@ me.say_hi()
   
   _Auto-generated from GitHub data for @MAKaminski (cards can be cached briefly)._
   
-  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&count_private=true&include_all_commits=true&border_radius=10)
+  ![GitHub Summary Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MAKaminski&theme=radical)
   ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10)
   
   ![GitHub Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical)
@@ -64,15 +62,11 @@ me.say_hi()
     <summary>📈 Interactive Detailed Stats & Graphs</summary>
     <br>
     
-  ![Commits by Hour](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical&utcOffset=-5)
+  ![Commits by Hour](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical)
   ![GitHub Repositories Stats](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
   ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10)
   ![Most Used Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical)
   ![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MAKaminski&theme=radical)
-  
-  ### 📊 Development Stats
-  
-  ![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=MAKaminski&theme=radical&border_radius=10)
   
   ### 🏆 Achievement Showcase
   
@@ -231,7 +225,7 @@ me.say_hi()
       <strong>FuboTV</strong> (Sep 2018 - Present)<br>
       <em>Senior Engineering Manager & Tech Lead</em><br>
       <br>
-      ![tvOS](https://img.shields.io/badge/-tvOS-000000?style=flat-square&logo=apple&logoColor=white)
+      <img src="https://img.shields.io/badge/-tvOS-000000?style=flat-square&logo=apple&logoColor=white" alt="tvOS badge" />
       <br>
       <sub>Sports-first virtual MVPD platform</sub>
     </td>
@@ -241,7 +235,7 @@ me.say_hi()
       <strong>Stationhead</strong> (Aug 2017 - Aug 2018)<br>
       <em>Lead iOS Developer</em><br>
       <br>
-      ![iOS](https://img.shields.io/badge/-iOS-007AFF?style=flat-square&logo=ios&logoColor=white)
+      <img src="https://img.shields.io/badge/-iOS-007AFF?style=flat-square&logo=ios&logoColor=white" alt="iOS badge" />
       <br>
       <sub>Real-time social radio platform</sub>
     </td>
@@ -258,8 +252,8 @@ me.say_hi()
       <strong>Sonad</strong><br>
       <em>Developer, Co-designer, Database Architect</em><br>
       <br>
-      ![FFT](https://img.shields.io/badge/-FFT-9C27B0?style=flat-square)
-      ![DSP](https://img.shields.io/badge/-DSP-FF5722?style=flat-square)
+      <img src="https://img.shields.io/badge/-FFT-9C27B0?style=flat-square" alt="FFT badge" />
+      <img src="https://img.shields.io/badge/-DSP-FF5722?style=flat-square" alt="DSP badge" />
       <br>
       <sub>Shazam meets RetailMeNot using FFT/DSP</sub>
     </td>
@@ -269,8 +263,8 @@ me.say_hi()
       <strong>Veil of Ignorance</strong><br>
       <em>All Roles</em><br>
       <br>
-      ![Game Development](https://img.shields.io/badge/-Game_Dev-FF6B35?style=flat-square)
-      ![AI](https://img.shields.io/badge/-AI-00C853?style=flat-square)
+      <img src="https://img.shields.io/badge/-Game_Dev-FF6B35?style=flat-square" alt="Game development badge" />
+      <img src="https://img.shields.io/badge/-AI-00C853?style=flat-square" alt="AI badge" />
       <br>
       <sub>Political philosophy strategy game</sub>
     </td>
@@ -280,8 +274,8 @@ me.say_hi()
       <strong>Parkarr</strong><br>
       <em>Developer, Co-designer, Database Architect</em><br>
       <br>
-      ![Parse](https://img.shields.io/badge/-Parse-249EDA?style=flat-square)
-      ![MapKit](https://img.shields.io/badge/-MapKit-007AFF?style=flat-square)
+      <img src="https://img.shields.io/badge/-Parse-249EDA?style=flat-square" alt="Parse badge" />
+      <img src="https://img.shields.io/badge/-MapKit-007AFF?style=flat-square" alt="MapKit badge" />
       <br>
       <sub>Fast Company 2017 World Changing Ideas Finalist</sub>
     </td>
@@ -298,7 +292,7 @@ me.say_hi()
       <strong>Spotfund</strong> (Mar 2016 - Nov 2016)<br>
       <em>Lead Developer</em><br>
       <br>
-      ![Social Impact](https://img.shields.io/badge/-Social_Impact-4CAF50?style=flat-square)
+      <img src="https://img.shields.io/badge/-Social_Impact-4CAF50?style=flat-square" alt="Social impact badge" />
       <br>
       <sub>Democratizing giving with $1-3 cap donations</sub>
     </td>
@@ -308,8 +302,8 @@ me.say_hi()
       <strong>Welli</strong> (Sep 2015 - Oct 2015)<br>
       <em>All Roles</em><br>
       <br>
-      ![Mental Health](https://img.shields.io/badge/-Mental_Health-FF9800?style=flat-square)
-      ![Touch ID](https://img.shields.io/badge/-Touch_ID-000000?style=flat-square)
+      <img src="https://img.shields.io/badge/-Mental_Health-FF9800?style=flat-square" alt="Mental health badge" />
+      <img src="https://img.shields.io/badge/-Touch_ID-000000?style=flat-square" alt="Touch ID badge" />
       <br>
       <sub>Positive psychology tools suite</sub>
     </td>
@@ -341,41 +335,14 @@ me.say_hi()
 
 ---
 
-## 📈 Interactive Skills Graph
+## 📈 Skills Snapshot
 
-```mermaid
-graph TD
-    A[MAKaminski] --> B[Data Science & ML]
-    A --> C[Full-Stack Development]
-    A --> D[Mobile Development]
-    A --> E[Enterprise Solutions]
-    
-    B --> B1[Python/TensorFlow]
-    B --> B2[MLOps/MLflow]
-    B --> B3[LLMs/Transformers]
-    B --> B4[FFT/DSP]
-    
-    C --> C1[React/Redux/Vue]
-    C --> C2[Node.js/Python]
-    C --> C3[AWS/GCP/Azure]
-    C --> C4[PostgreSQL/MongoDB]
-    
-    D --> D1[iOS/Swift]
-    D --> D2[tvOS Development]
-    D --> D3[Android/Cross-platform]
-    D --> D4[Real-time Apps]
-    
-    E --> E1[Team Leadership]
-    E --> E2[Architecture Design]
-    E --> E3[Performance Optimization]
-    E --> E4[Scalable Systems]
-    
-    style A fill:#9400D3,stroke:#333,stroke-width:4px,color:#fff
-    style B fill:#FF6F00,stroke:#333,stroke-width:2px
-    style C fill:#4285F4,stroke:#333,stroke-width:2px
-    style D fill:#34A853,stroke:#333,stroke-width:2px
-    style E fill:#EA4335,stroke:#333,stroke-width:2px
-```
+| Domain | Focus Areas |
+|---|---|
+| Data Science & ML | Python, TensorFlow/PyTorch, MLOps/MLflow, LLMs, FFT/DSP |
+| Full-Stack Development | React/Vue, Node.js, FastAPI/Django, PostgreSQL/MongoDB |
+| Mobile Development | iOS/Swift, tvOS, Android, Real-time App Experiences |
+| Enterprise Solutions | Team Leadership, Architecture, Performance, Scalability |
 
 ---
 
