@@ -15,6 +15,44 @@
 
 ---
 
+## 📍 Interaction Tracker (Beta)
+
+<div align="center">
+
+![Total Page Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_total&query=%24.value&label=Total%20Page%20Views&style=for-the-badge&color=6f42c1)
+![Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Freal_human_page_views&query=%24.value&label=Real%20Human%20Views&style=for-the-badge&color=0e8a16)
+![AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_ai&query=%24.value&label=AI%20Views&style=for-the-badge&color=d73a49)
+![Human Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb)
+![AI Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500)
+![Feature Uses Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df)
+
+_Conversion rates are calculated live in the interactive feature (overall, human, and AI)._
+
+</div>
+
+---
+
+## 🌐 Website Views Tracker (Portfolio Sites)
+
+<div align="center">
+
+![Portfolio Views Total](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1)
+![Portfolio Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16)
+![Portfolio AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_ai&query=%24.value&label=Portfolio%20AI%20Views&style=for-the-badge&color=d73a49)
+![Portfolio Clicks Human](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_human&query=%24.value&label=Portfolio%20Clicks%20(Human)&style=for-the-badge&color=1f6feb)
+![Portfolio Clicks AI](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_ai&query=%24.value&label=Portfolio%20Clicks%20(AI)&style=for-the-badge&color=fb8500)
+![Portfolio Clicks Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df)
+
+![lace-luxx.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_lace_luxx_com_views_total&query=%24.value&label=lace--luxx.com%20Views&style=flat-square&color=7c3aed)
+![modular-equity.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_modular_equity_com_views_total&query=%24.value&label=modular--equity.com%20Views&style=flat-square&color=2563eb)
+![michael-kaminski.io Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_michael_kaminski_io_views_total&query=%24.value&label=michael--kaminski.io%20Views&style=flat-square&color=0f766e)
+
+_Per-site and portfolio conversion rates are calculated in the Website View Intelligence feature._
+
+</div>
+
+---
+
 ## 🎯 About Me
 
 ```python
@@ -74,6 +112,62 @@ me.say_hi()
     
   </details>
   
+</div>
+
+---
+
+## 🧪 Interactive Feature: Conversion Ping Lab
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="left" width="55%">
+        <h4>Click-to-Track Interactive Feature</h4>
+        <p>
+          Track page views and feature clicks segmented by <b>human</b>, <b>AI</b>, and <b>both</b>,
+          with live conversion-rate calculations.
+        </p>
+        <p>
+          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/cursor/dashboard-data-accuracy-f6d3/feature/index.html"><b>Open Interactive Lab (current branch)</b></a><br>
+          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/main/feature/index.html">Open Interactive Lab (main branch)</a>
+        </p>
+      </td>
+      <td align="left" width="45%">
+        <h4>Tracker Beside Feature</h4>
+        <img alt="Feature uses both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df" /><br>
+        <img alt="Human clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb" /><br>
+        <img alt="AI clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🌐 Interactive Feature: Website View Intelligence
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="left" width="55%">
+        <h4>Website View Intelligence Lab</h4>
+        <p>
+          Track and compare views/clicks across
+          <code>lace-luxx.com</code>, <code>modular-equity.com</code>, and <code>michael-kaminski.io</code>.
+          Includes segmentation for total vs real-human vs AI and conversion rates.
+        </p>
+        <p>
+          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/cursor/dashboard-data-accuracy-f6d3/feature/index.html"><b>Open Website View Intelligence Lab</b></a>
+        </p>
+      </td>
+      <td align="left" width="45%">
+        <h4>Tracker Beside Feature</h4>
+        <img alt="Portfolio views total" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1" /><br>
+        <img alt="Portfolio clicks both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df" /><br>
+        <img alt="Portfolio real human views" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
