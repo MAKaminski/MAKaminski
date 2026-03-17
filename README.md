@@ -53,7 +53,9 @@ _Per-site and portfolio conversion rates are calculated in the Website View Inte
 
 ---
 
-## 🧮 Embedded Calculator Logic (on GitHub page)
+<details>
+<summary><b>🧮 Embedded Calculator Logic (on GitHub page)</b></summary>
+<br>
 
 <a id="calc-profile-conversion"></a>
 ### Profile conversion calculator code
@@ -104,9 +106,11 @@ function siteRates(siteClicksBoth, siteViewsTotal, siteClicksHuman, siteRealHuma
 
 > Data key storage is documented below in **Tracker Storage Key Maps**.
 
----
+</details>
 
-## 🧱 Tracker Storage Key Maps
+<details>
+<summary><b>🧱 Tracker Storage Key Maps</b></summary>
+<br>
 
 <a id="profile-views-key-map"></a>
 ### Profile tracker view storage (namespace `makaminski_profile_interactions_v2`)
@@ -192,6 +196,8 @@ site_michael_kaminski_io_clicks_human
 site_michael_kaminski_io_clicks_ai
 site_michael_kaminski_io_clicks_both
 ```
+
+</details>
 
 ---
 
