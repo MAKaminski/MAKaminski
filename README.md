@@ -9,7 +9,6 @@
   ![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=blueviolet&style=for-the-badge)
   ![GitHub User's stars](https://img.shields.io/github/stars/MAKaminski?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=gold)
   ![GitHub followers](https://img.shields.io/github/followers/MAKaminski?label=Follow&style=for-the-badge&color=blue)
-  [![LinkedIn](https://img.shields.io/badge/-Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/yourlinkedin)
   [![Website](https://img.shields.io/badge/-Visit_My_Website-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://michael-kaminski.io)
   
 </div>
@@ -25,7 +24,7 @@ class DataScientist:
         self.role = "Data Scientist & ML Engineer"
         self.passions = ["Machine Learning", "Data Engineering", "Full-Stack Development", "iOS Development"]
         self.current_focus = "Building AI-powered solutions"
-        self.favorite_ide = "Cursor AI"  # 🔥 The future of coding!
+        self.favorite_ide = "VS Code + AI tooling"
         self.experience = {
             "enterprise": ["FuboTV - tvOS Engineering Manager", "Stationhead - Lead iOS Developer"],
             "innovation": ["Sonad - FFT/DSP Audio Processing", "Veil of Ignorance - Strategy Game"],
@@ -34,7 +33,7 @@ class DataScientist:
         
     def say_hi(self):
         print("Thanks for dropping by! Let's build something amazing together! 🚀")
-        print(f"Coding with {self.favorite_ide} - where AI meets development! ✨")
+        print(f"Coding with {self.favorite_ide} ✨")
 
 me = DataScientist()
 me.say_hi()
@@ -54,20 +53,22 @@ me.say_hi()
 
 <div align="center">
   
-  ![Total Contributions](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&count_private=true&include_all_commits=true&border_radius=10)
+  _Auto-generated from GitHub data for @MAKaminski (cards can be cached briefly)._
+  
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&count_private=true&include_all_commits=true&border_radius=10)
   ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10)
   
-  ![GitHub Profile Summary](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical)
+  ![GitHub Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical)
   
   <details>
     <summary>📈 Interactive Detailed Stats & Graphs</summary>
     <br>
     
-  ![Commits by Hour](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical&utcOffset=-5)
-  ![GitHub Repositories Stats](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
+  ![Commits by Hour](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical&utcOffset=-5)
+  ![GitHub Repositories Stats](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
   ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10)
-  ![Most Used Languages](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical)
-  ![Stats](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=MAKaminski&theme=radical)
+  ![Most Used Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical)
+  ![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MAKaminski&theme=radical)
   
   ### 📊 Development Stats
   
@@ -75,25 +76,8 @@ me.say_hi()
   
   ### 🏆 Achievement Showcase
   
-  ![Trophies](https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3)
+  ![Trophies](https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage)
     
-  </details>
-  
-  <details>
-    <summary>💻 Favorite IDE & Tools</summary>
-    <br>
-    
-  ### 🚀 Primary Development Environment
-  
-  ![Cursor](https://img.shields.io/badge/Cursor-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-  ![AI Powered](https://img.shields.io/badge/AI_Powered-FF6B35?style=for-the-badge&logo=openai&logoColor=white)
-  
-  **Why Cursor?**
-  - 🤖 Built-in AI assistance that understands context
-  - ⚡ Lightning-fast development with intelligent suggestions
-  - 🔍 Advanced code understanding and refactoring
-  - 🎯 Perfect for data science and ML workflows
-  
   </details>
   
 </div>
@@ -403,17 +387,15 @@ graph TD
 
 | Phase | Focus | Tools |
 |-------|-------|-------|
-| 🎯 **Planning** | Requirements & Architecture | Cursor AI, Miro, Figma |
-| 🚀 **Development** | Clean Code & Best Practices | Cursor AI, Git, Docker |
+| 🎯 **Planning** | Requirements & Architecture | Miro, Figma, Notion |
+| 🚀 **Development** | Clean Code & Best Practices | Python, TypeScript, Git, Docker |
 | 🧪 **Testing** | Quality Assurance | Jest, PyTest, XCTest |
 | 📊 **Analytics** | Data-Driven Decisions | ML/AI, A/B Testing |
 | 🔄 **Optimization** | Performance & Scalability | Profiling, Monitoring |
 
 ### 💡 Innovation Metrics
 
-![Innovation](https://img.shields.io/badge/Innovation_Projects-8+-success?style=for-the-badge)
-![Patents](https://img.shields.io/badge/Patent_Applications-2+-blue?style=for-the-badge)
-![Awards](https://img.shields.io/badge/Industry_Recognition-Fast_Company_Finalist-gold?style=for-the-badge)
+_Project and impact highlights are summarized above under Featured Projects & Portfolio._
 
 </div>
 
@@ -426,9 +408,7 @@ graph TD
   **Ready to collaborate on something amazing?**
   
   [![Email](https://img.shields.io/badge/-MKaminski1337@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:MKaminski1337@gmail.com)
-  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yourlinkedin)
   [![Website](https://img.shields.io/badge/-Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://michael-kaminski.io)
-  [![Cursor](https://img.shields.io/badge/-Cursor_AI_Fan-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://cursor.sh)
   
   ### 📊 Real-time Activity
   
@@ -436,8 +416,8 @@ graph TD
   
   ---
   
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontAlignY=65&desc=Let's%20build%20the%20future%20together%20with%20Cursor%20AI&descAlignY=82&descAlign=center"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontAlignY=65&desc=Let's%20build%20the%20future%20together&descAlignY=82&descAlign=center"/>
   
-  ### 🌟 "The best way to predict the future is to create it" - with Cursor AI as my co-pilot! 
+  ### 🌟 "The best way to predict the future is to create it."
   
 </div>
