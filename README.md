@@ -231,22 +231,29 @@ me.say_hi()
 
 <div align="center">
   
-  _Auto-generated from GitHub data for @MAKaminski (cards can be cached briefly)._
+  _Auto-generated from GitHub data for @MAKaminski (cards can be cached briefly). Private contribution signals are included when GitHub visibility/API permits._
   
-  ![GitHub Summary Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MAKaminski&theme=radical)
+  ![GitHub Stats (All Commits, Private-Aware)](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github)
   ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10)
   
   ![GitHub Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical)
   
   <details>
-    <summary>📈 Interactive Detailed Stats & Graphs</summary>
+    <summary>📈 Private-Aware Detailed Stats & Graphs</summary>
     <br>
     
   ![Commits by Hour](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical)
-  ![GitHub Repositories Stats](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
-  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10)
+  ![Repository LOC Mix (Relative)](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
+  ![Top Languages (Relative LOC)](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10&langs_count=8)
   ![Most Used Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical)
-  ![Stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MAKaminski&theme=radical)
+  ![Contribution Activity](https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true)
+  
+  ### 🔎 Metric Coverage
+  
+  - **Clicks:** tracked in the `Interaction Tracker` and `Website Views Tracker` sections above.
+  - **Lines of Code (relative):** represented by language/repository distribution cards.
+  - **Commits & Git activity:** represented by all-commit stats, streaks, and contribution graph.
+  - **Private contributions:** surfaced where allowed by GitHub visibility and profile settings.
   
   ### 🏆 Achievement Showcase
   
@@ -435,47 +442,20 @@ me.say_hi()
 
 <div align="center">
 
-### 🗂️ Selected Public GitHub Projects
+### 🗂️ Top Repository Highlights (Public + Private-Ready)
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/MAKaminski/alpha-gen-trading">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=alpha-gen-trading&theme=dark&border_radius=10" alt="alpha-gen-trading">
-      </a>
-      <br>
-      <em>Trading automation and real-time strategy tooling</em>
-    </td>
-    <td align="center">
-      <a href="https://github.com/MAKaminski/real-estate-investment-analysis">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=real-estate-investment-analysis&theme=dark&border_radius=10" alt="real-estate-investment-analysis">
-      </a>
-      <br>
-      <em>Investment return modeling and analytics workflows</em>
-    </td>
-  </tr>
-</table>
+| Repository | Visibility | Description |
+|---|---|---|
+| [`alpha-gen-trading`](https://github.com/MAKaminski/alpha-gen-trading) | Public | Real-time trading automation system with VWAP/MA9 crossover strategy for 0DTE QQQ options. |
+| [`real-estate-investment-analysis`](https://github.com/MAKaminski/real-estate-investment-analysis) | Public | Real estate investment analysis with cash-on-cash, appreciation, tax savings, and principal paydown metrics. |
+| [`harness-engineering-alpha-kite`](https://github.com/MAKaminski/harness-engineering-alpha-kite) | Public | Symphony Python service orchestrating coding agents from Linear issue workflows. |
+| [`k-alpha`](https://github.com/MAKaminski/k-alpha) | Public | Trading application. |
+| [`movie_scene_battle_analyzer`](https://github.com/MAKaminski/movie_scene_battle_analyzer) | Public | Description not set on GitHub. |
+| [`alpha-kite-max`](https://github.com/MAKaminski/alpha-kite-max) | Public | Description not set on GitHub. |
+| [`rentEngine`](https://github.com/MAKaminski/rentEngine) | Public | Description not set on GitHub. |
+| [`depot-mcp`](https://github.com/MAKaminski/depot-mcp) | Public | Description not set on GitHub. |
 
-### 📦 Archive & Learning Projects
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/MAKaminski/data_analysis">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=data_analysis&theme=dark&border_radius=10" alt="Data Analysis Toolkit">
-      </a>
-      <br>
-      <em>Data science exploration and analysis</em>
-    </td>
-    <td align="center">
-      <a href="https://github.com/MAKaminski/IconGenerator">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=IconGenerator&theme=dark&border_radius=10" alt="Icon Generator Tool">
-      </a>
-      <br>
-      <em>Automated icon generation utility</em>
-    </td>
-  </tr>
-</table>
+_Private/internal repositories can be listed in the same format when metadata is approved for public display. Aggregate private contribution signal is represented in the analytics section above._
 
 </div>
 
