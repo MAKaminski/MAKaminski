@@ -326,6 +326,43 @@ me.say_hi()
 
 ---
 
+## 🏰 Camelot Dashboard: All Services (Admin)
+
+<div align="center">
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>Admin Link</th>
+    </tr>
+    <tr>
+      <td>Railway</td>
+      <td><a href="https://railway.app/dashboard">Open Railway Dashboard</a></td>
+    </tr>
+    <tr>
+      <td>Vercel</td>
+      <td><a href="https://vercel.com/dashboard">Open Vercel Dashboard</a></td>
+    </tr>
+    <tr>
+      <td>Supabase</td>
+      <td><a href="https://supabase.com/dashboard/projects">Open Supabase Dashboard</a></td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td><a href="https://github.com/dashboard">Open GitHub Dashboard</a></td>
+    </tr>
+    <tr>
+      <td>Polygon</td>
+      <td><a href="https://polygonscan.com/">Open Polygon Explorer</a></td>
+    </tr>
+    <tr>
+      <td><b>All Services</b></td>
+      <td><a href="https://github.com/MAKaminski">Open Services Hub (GitHub)</a></td>
+    </tr>
+  </table>
+</div>
+
+---
+
 ## 🛠️ Tech Arsenal
 
 <details open>
