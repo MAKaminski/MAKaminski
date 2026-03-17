@@ -15,6 +15,23 @@
 
 ---
 
+## 📍 Interaction Tracker (Beta)
+
+<div align="center">
+
+![Total Page Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_total&query=%24.value&label=Total%20Page%20Views&style=for-the-badge&color=6f42c1)
+![Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Freal_human_page_views&query=%24.value&label=Real%20Human%20Views&style=for-the-badge&color=0e8a16)
+![AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_ai&query=%24.value&label=AI%20Views&style=for-the-badge&color=d73a49)
+![Human Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb)
+![AI Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500)
+![Feature Uses Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df)
+
+_Conversion rates are calculated live in the interactive feature (overall, human, and AI)._
+
+</div>
+
+---
+
 ## 🎯 About Me
 
 ```python
@@ -74,6 +91,34 @@ me.say_hi()
     
   </details>
   
+</div>
+
+---
+
+## 🧪 Interactive Feature: Conversion Ping Lab
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="left" width="55%">
+        <h4>Click-to-Track Interactive Feature</h4>
+        <p>
+          Track page views and feature clicks segmented by <b>human</b>, <b>AI</b>, and <b>both</b>,
+          with live conversion-rate calculations.
+        </p>
+        <p>
+          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/cursor/dashboard-data-accuracy-f6d3/feature/index.html"><b>Open Interactive Lab (current branch)</b></a><br>
+          <a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/MAKaminski/MAKaminski/main/feature/index.html">Open Interactive Lab (main branch)</a>
+        </p>
+      </td>
+      <td align="left" width="45%">
+        <h4>Tracker Beside Feature</h4>
+        <img alt="Feature uses both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df" /><br>
+        <img alt="Human clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb" /><br>
+        <img alt="AI clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---

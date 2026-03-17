@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interaction Conversion Lab</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #070a12;
+        --card: #131a2a;
+        --card-alt: #1b2336;
+        --text: #e8ecf8;
+        --muted: #a8b1c9;
+        --accent: #8d5bff;
+        --accent-2: #2dd4bf;
+        --border: #2c3753;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: radial-gradient(circle at top, #121a2f 0%, var(--bg) 55%);
+        color: var(--text);
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .panel {
+        background: linear-gradient(180deg, var(--card-alt), var(--card));
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: 1.5fr 1fr;
+      }
+      @media (max-width: 860px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      h1, h2, h3 {
+        margin: 0 0 10px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+      @media (max-width: 700px) {
+        .kpis {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      .kpi {
+        background: #0f1525;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .kpi .label {
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .kpi .value {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 4px;
+      }
+      .btn {
+        appearance: none;
+        border: 0;
+        border-radius: 10px;
+        padding: 12px 16px;
+        background: linear-gradient(90deg, var(--accent), #6f8cff);
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .pill {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #0f1525;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 12px;
+      }
+      code {
+        background: #0f1525;
+        border: 1px solid var(--border);
+        border-radius: 7px;
+        padding: 1px 6px;
+      }
+      .small {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="panel">
+        <h1>Interactive Conversion Lab</h1>
+        <p class="muted">
+          Tracks page views, real human views, AI views, and feature clicks by segment.
+          Conversion rate is computed as <code>clicks / views</code>.
+        </p>
+        <p>
+          <span id="agent-pill" class="pill">Detecting viewer type...</span>
+          <span id="viewer-pill" class="pill">Checking local viewer ID...</span>
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>Top Tracker</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="label">Total Page Views</div><div id="pv-total" class="value">0</div></div>
+          <div class="kpi"><div class="label">Real Human Page Views</div><div id="pv-human-real" class="value">0</div></div>
+          <div class="kpi"><div class="label">AI Page Views</div><div id="pv-ai" class="value">0</div></div>
+          <div class="kpi"><div class="label">Human Clicks</div><div id="clicks-human" class="value">0</div></div>
+          <div class="kpi"><div class="label">AI Clicks</div><div id="clicks-ai" class="value">0</div></div>
+          <div class="kpi"><div class="label">Clicks (Both)</div><div id="clicks-both" class="value">0</div></div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <h2>Feature: Conversion Ping</h2>
+          <p class="muted">
+            Click the button to register feature usage. This increments segmented click counters and updates conversion metrics.
+          </p>
+          <button id="feature-btn" class="btn">Use Feature</button>
+          <p id="feature-note" class="small muted"></p>
+        </div>
+
+        <div class="panel">
+          <h3>Tracker Beside Feature</h3>
+          <div class="kpi"><div class="label">Feature Uses (Both)</div><div id="side-uses" class="value">0</div></div>
+          <div class="kpi"><div class="label">Overall Conversion Rate</div><div id="cr-total" class="value">0.00%</div></div>
+          <div class="kpi"><div class="label">Human Conversion Rate</div><div id="cr-human" class="value">0.00%</div></div>
+          <div class="kpi"><div class="label">AI Conversion Rate</div><div id="cr-ai" class="value">0.00%</div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Tracking Notes</h3>
+        <ul class="muted">
+          <li>Real human page views are approximated using a browser-local viewer ID plus user-agent classification.</li>
+          <li>AI page views/clicks are classified by known crawler/agent signatures in user-agent strings.</li>
+          <li>Classification is heuristic-based and intended for directional analytics, not legal attribution.</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const NS = "makaminski_profile_interactions_v2";
+      const API = "https://abacus.jasoncameron.dev";
+      const KEYS = {
+        pageViewsTotal: "page_views_total",
+        pageViewsHuman: "page_views_human",
+        pageViewsAI: "page_views_ai",
+        realHumanPageViews: "real_human_page_views",
+        clicksHuman: "clicks_human",
+        clicksAI: "clicks_ai",
+        clicksBoth: "clicks_both"
+      };
+
+      const AI_PATTERNS = [
+        /bot/i,
+        /crawler/i,
+        /spider/i,
+        /gptbot/i,
+        /chatgpt-user/i,
+        /anthropic-ai/i,
+        /claudebot/i,
+        /perplexitybot/i,
+        /bytespider/i,
+        /ccbot/i,
+        /facebookexternalhit/i
+      ];
+
+      let viewerType = "human";
+      let isNewHuman = false;
+
+      async function hit(key) {
+        const res = await fetch(`${API}/hit/${NS}/${key}`);
+        const data = await res.json();
+        return Number(data.value || 0);
+      }
+
+      async function get(key) {
+        const res = await fetch(`${API}/get/${NS}/${key}`);
+        const data = await res.json();
+        return Number(data.value || 0);
+      }
+
+      function detectViewerType(userAgent) {
+        return AI_PATTERNS.some((pattern) => pattern.test(userAgent)) ? "ai" : "human";
+      }
+
+      function ensureViewerId() {
+        const storageKey = "mk_profile_viewer_id_v2";
+        const existing = localStorage.getItem(storageKey);
+        if (existing) return false;
+        const next = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        localStorage.setItem(storageKey, next);
+        return true;
+      }
+
+      function fmtPct(num) {
+        return `${num.toFixed(2)}%`;
+      }
+
+      function toPct(clicks, views) {
+        if (!views) return 0;
+        return (clicks / views) * 100;
+      }
+
+      function setText(id, value) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+      }
+
+      async function refresh() {
+        const [
+          pvTotal,
+          pvHumanReal,
+          pvAI,
+          clicksHuman,
+          clicksAI,
+          clicksBoth
+        ] = await Promise.all([
+          get(KEYS.pageViewsTotal),
+          get(KEYS.realHumanPageViews),
+          get(KEYS.pageViewsAI),
+          get(KEYS.clicksHuman),
+          get(KEYS.clicksAI),
+          get(KEYS.clicksBoth)
+        ]);
+
+        const crTotal = toPct(clicksBoth, pvTotal);
+        const crHuman = toPct(clicksHuman, pvHumanReal);
+        const crAI = toPct(clicksAI, pvAI);
+
+        setText("pv-total", pvTotal);
+        setText("pv-human-real", pvHumanReal);
+        setText("pv-ai", pvAI);
+        setText("clicks-human", clicksHuman);
+        setText("clicks-ai", clicksAI);
+        setText("clicks-both", clicksBoth);
+        setText("side-uses", clicksBoth);
+        setText("cr-total", fmtPct(crTotal));
+        setText("cr-human", fmtPct(crHuman));
+        setText("cr-ai", fmtPct(crAI));
+      }
+
+      async function trackPageView() {
+        viewerType = detectViewerType(navigator.userAgent);
+        isNewHuman = viewerType === "human" ? ensureViewerId() : false;
+
+        setText("agent-pill", `Viewer type: ${viewerType.toUpperCase()}`);
+        setText("viewer-pill", isNewHuman ? "New human viewer" : "Returning/AI viewer");
+
+        await hit(KEYS.pageViewsTotal);
+        await hit(viewerType === "ai" ? KEYS.pageViewsAI : KEYS.pageViewsHuman);
+        if (viewerType === "human" && isNewHuman) {
+          await hit(KEYS.realHumanPageViews);
+        }
+      }
+
+      async function onFeatureClick() {
+        const button = document.getElementById("feature-btn");
+        button.disabled = true;
+        setText("feature-note", "Recording interaction...");
+        await hit(KEYS.clicksBoth);
+        await hit(viewerType === "ai" ? KEYS.clicksAI : KEYS.clicksHuman);
+        await refresh();
+        setText("feature-note", `Interaction recorded as ${viewerType.toUpperCase()} click.`);
+        button.disabled = false;
+      }
+
+      async function init() {
+        await trackPageView();
+        await refresh();
+        document.getElementById("feature-btn").addEventListener("click", onFeatureClick);
+      }
+
+      init().catch((err) => {
+        setText("feature-note", `Tracker error: ${err.message}`);
+      });
+    </script>
+  </body>
+</html>
