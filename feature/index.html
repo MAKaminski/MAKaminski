@@ -89,6 +89,15 @@
         opacity: 0.6;
         cursor: not-allowed;
       }
+      .btn.secondary {
+        background: linear-gradient(90deg, #0f766e, var(--accent-2));
+      }
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+      }
       .pill {
         display: inline-block;
         padding: 4px 10px;
@@ -106,6 +115,20 @@
       }
       .small {
         font-size: 12px;
+      }
+      table.metrics {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+      table.metrics th,
+      table.metrics td {
+        border: 1px solid var(--border);
+        padding: 8px;
+        text-align: left;
+      }
+      table.metrics th {
+        background: #0f1525;
       }
     </style>
   </head>
@@ -155,6 +178,53 @@
       </div>
 
       <div class="panel">
+        <h2>Feature: Multi-Site Website View Intelligence</h2>
+        <p class="muted">
+          Aggregates view + click behavior for <code>lace-luxx.com</code>, <code>modular-equity.com</code>,
+          and <code>michael-kaminski.io</code>, including human vs AI segmentation and conversion rates.
+        </p>
+        <div class="grid">
+          <div>
+            <h3>Visit Buttons (Tracked Clicks)</h3>
+            <div id="site-buttons" class="button-row"></div>
+            <p id="site-feature-note" class="small muted"></p>
+          </div>
+          <div>
+            <h3>Tracker Beside Feature</h3>
+            <div class="kpi"><div class="label">Portfolio Views (Total)</div><div id="portfolio-views-total" class="value">0</div></div>
+            <div class="kpi"><div class="label">Portfolio Real Human Views</div><div id="portfolio-views-human-real" class="value">0</div></div>
+            <div class="kpi"><div class="label">Portfolio AI Views</div><div id="portfolio-views-ai" class="value">0</div></div>
+            <div class="kpi"><div class="label">Portfolio Clicks (Both)</div><div id="portfolio-clicks-both" class="value">0</div></div>
+            <div class="kpi"><div class="label">Portfolio Conversion Rate</div><div id="portfolio-cr-total" class="value">0.00%</div></div>
+            <div class="kpi"><div class="label">Human / AI Conversion</div><div id="portfolio-cr-segments" class="value">0.00% / 0.00%</div></div>
+          </div>
+        </div>
+        <h3>Per-Site Metrics</h3>
+        <div id="site-metrics"></div>
+        <details>
+          <summary>Embed snippet on each website to capture real page views</summary>
+          <pre class="small"><code>&lt;script&gt;
+(function() {
+  const API = "https://abacus.jasoncameron.dev";
+  const NS = "makaminski_site_views_v1";
+  const SITE = "lace_luxx_com"; // or modular_equity_com / michael_kaminski_io
+  const isAI = /bot|crawler|spider|gptbot|anthropic-ai|claudebot|perplexitybot|ccbot/i.test(navigator.userAgent);
+  const viewerKey = "mk_site_viewer_id_" + SITE;
+  const isNewHuman = !isAI && !localStorage.getItem(viewerKey);
+  if (isNewHuman) localStorage.setItem(viewerKey, Date.now().toString(36));
+  const hit = (k) =&gt; fetch(`${API}/hit/${NS}/${k}`).catch(() =&gt; null);
+  hit(`site_${SITE}_views_total`);
+  hit(isAI ? `site_${SITE}_views_ai` : `site_${SITE}_views_human`);
+  if (isNewHuman) hit(`site_${SITE}_real_human_views`);
+  hit("portfolio_views_total");
+  hit(isAI ? "portfolio_views_ai" : "portfolio_views_human");
+  if (isNewHuman) hit("portfolio_real_human_views");
+})();
+&lt;/script&gt;</code></pre>
+        </details>
+      </div>
+
+      <div class="panel">
         <h3>Tracking Notes</h3>
         <ul class="muted">
           <li>Real human page views are approximated using a browser-local viewer ID plus user-agent classification.</li>
@@ -166,6 +236,7 @@
 
     <script>
       const NS = "makaminski_profile_interactions_v2";
+      const SITE_NS = "makaminski_site_views_v1";
       const API = "https://abacus.jasoncameron.dev";
       const KEYS = {
         pageViewsTotal: "page_views_total",
@@ -176,6 +247,11 @@
         clicksAI: "clicks_ai",
         clicksBoth: "clicks_both"
       };
+      const PORTFOLIO_SITES = [
+        { domain: "lace-luxx.com", slug: "lace_luxx_com" },
+        { domain: "modular-equity.com", slug: "modular_equity_com" },
+        { domain: "michael-kaminski.io", slug: "michael_kaminski_io" }
+      ];
 
       const AI_PATTERNS = [
         /bot/i,
@@ -194,14 +270,14 @@
       let viewerType = "human";
       let isNewHuman = false;
 
-      async function hit(key) {
-        const res = await fetch(`${API}/hit/${NS}/${key}`);
+      async function hit(key, namespace = NS) {
+        const res = await fetch(`${API}/hit/${namespace}/${key}`);
         const data = await res.json();
         return Number(data.value || 0);
       }
 
-      async function get(key) {
-        const res = await fetch(`${API}/get/${NS}/${key}`);
+      async function get(key, namespace = NS) {
+        const res = await fetch(`${API}/get/${namespace}/${key}`);
         const data = await res.json();
         return Number(data.value || 0);
       }
@@ -231,6 +307,18 @@
       function setText(id, value) {
         const el = document.getElementById(id);
         if (el) el.textContent = value;
+      }
+
+      function siteKey(site, suffix) {
+        return `site_${site.slug}_${suffix}`;
+      }
+
+      function isNewHumanForSite(site) {
+        const storageKey = `mk_site_viewer_id_${site.slug}`;
+        const existing = localStorage.getItem(storageKey);
+        if (existing) return false;
+        localStorage.setItem(storageKey, `${Date.now()}-${Math.random().toString(36).slice(2)}`);
+        return true;
       }
 
       async function refresh() {
@@ -266,6 +354,132 @@
         setText("cr-ai", fmtPct(crAI));
       }
 
+      async function trackPortfolioSiteView(site) {
+        const newHumanForSite = viewerType === "human" ? isNewHumanForSite(site) : false;
+
+        await hit(siteKey(site, "views_total"), SITE_NS);
+        await hit(siteKey(site, viewerType === "ai" ? "views_ai" : "views_human"), SITE_NS);
+        if (viewerType === "human" && newHumanForSite) {
+          await hit(siteKey(site, "real_human_views"), SITE_NS);
+        }
+
+        await hit("portfolio_views_total", SITE_NS);
+        await hit(viewerType === "ai" ? "portfolio_views_ai" : "portfolio_views_human", SITE_NS);
+        if (viewerType === "human" && newHumanForSite) {
+          await hit("portfolio_real_human_views", SITE_NS);
+        }
+      }
+
+      async function refreshPortfolioTracker() {
+        const [
+          viewsTotal,
+          viewsHumanReal,
+          viewsAI,
+          clicksHuman,
+          clicksAI,
+          clicksBoth
+        ] = await Promise.all([
+          get("portfolio_views_total", SITE_NS),
+          get("portfolio_real_human_views", SITE_NS),
+          get("portfolio_views_ai", SITE_NS),
+          get("portfolio_clicks_human", SITE_NS),
+          get("portfolio_clicks_ai", SITE_NS),
+          get("portfolio_clicks_both", SITE_NS)
+        ]);
+
+        setText("portfolio-views-total", viewsTotal);
+        setText("portfolio-views-human-real", viewsHumanReal);
+        setText("portfolio-views-ai", viewsAI);
+        setText("portfolio-clicks-both", clicksBoth);
+
+        const crTotal = toPct(clicksBoth, viewsTotal);
+        const crHuman = toPct(clicksHuman, viewsHumanReal);
+        const crAI = toPct(clicksAI, viewsAI);
+        setText("portfolio-cr-total", fmtPct(crTotal));
+        setText("portfolio-cr-segments", `${fmtPct(crHuman)} / ${fmtPct(crAI)}`);
+
+        const siteStats = await Promise.all(
+          PORTFOLIO_SITES.map(async (site) => {
+            const [sViewsTotal, sHumanReal, sAI, sClicksHuman, sClicksAI, sClicksBoth] = await Promise.all([
+              get(siteKey(site, "views_total"), SITE_NS),
+              get(siteKey(site, "real_human_views"), SITE_NS),
+              get(siteKey(site, "views_ai"), SITE_NS),
+              get(siteKey(site, "clicks_human"), SITE_NS),
+              get(siteKey(site, "clicks_ai"), SITE_NS),
+              get(siteKey(site, "clicks_both"), SITE_NS)
+            ]);
+            return {
+              site,
+              sViewsTotal,
+              sHumanReal,
+              sAI,
+              sClicksHuman,
+              sClicksAI,
+              sClicksBoth,
+              sCrTotal: toPct(sClicksBoth, sViewsTotal),
+              sCrHuman: toPct(sClicksHuman, sHumanReal),
+              sCrAI: toPct(sClicksAI, sAI)
+            };
+          })
+        );
+
+        const rows = siteStats.map((r) => `
+          <tr>
+            <td>${r.site.domain}</td>
+            <td>${r.sViewsTotal}</td>
+            <td>${r.sHumanReal}</td>
+            <td>${r.sAI}</td>
+            <td>${r.sClicksBoth}</td>
+            <td>${fmtPct(r.sCrTotal)}</td>
+            <td>${fmtPct(r.sCrHuman)} / ${fmtPct(r.sCrAI)}</td>
+          </tr>
+        `).join("");
+
+        const metricsHtml = `
+          <table class="metrics">
+            <thead>
+              <tr>
+                <th>Site</th>
+                <th>Views Total</th>
+                <th>Real Human Views</th>
+                <th>AI Views</th>
+                <th>Clicks (Both)</th>
+                <th>CR Total</th>
+                <th>CR Human / AI</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        `;
+        document.getElementById("site-metrics").innerHTML = metricsHtml;
+      }
+
+      async function recordSiteClick(site) {
+        await hit(siteKey(site, "clicks_both"), SITE_NS);
+        await hit(siteKey(site, viewerType === "ai" ? "clicks_ai" : "clicks_human"), SITE_NS);
+        await hit("portfolio_clicks_both", SITE_NS);
+        await hit(viewerType === "ai" ? "portfolio_clicks_ai" : "portfolio_clicks_human", SITE_NS);
+      }
+
+      function renderSiteButtons() {
+        const root = document.getElementById("site-buttons");
+        root.innerHTML = "";
+        PORTFOLIO_SITES.forEach((site) => {
+          const button = document.createElement("button");
+          button.className = "btn secondary";
+          button.textContent = `Visit ${site.domain}`;
+          button.addEventListener("click", () => {
+            window.open(`https://${site.domain}`, "_blank", "noopener,noreferrer");
+            setText("site-feature-note", `Recording click for ${site.domain}...`);
+            recordSiteClick(site)
+              .then(refreshPortfolioTracker)
+              .then(() => setText("site-feature-note", `Recorded ${viewerType.toUpperCase()} click for ${site.domain}.`))
+              .catch((err) => setText("site-feature-note", `Tracking error: ${err.message}`));
+          });
+          root.appendChild(button);
+        });
+      }
+
       async function trackPageView() {
         viewerType = detectViewerType(navigator.userAgent);
         isNewHuman = viewerType === "human" ? ensureViewerId() : false;
@@ -277,6 +491,13 @@
         await hit(viewerType === "ai" ? KEYS.pageViewsAI : KEYS.pageViewsHuman);
         if (viewerType === "human" && isNewHuman) {
           await hit(KEYS.realHumanPageViews);
+        }
+
+        // If this page is ever hosted on one of the tracked domains, auto-record that site view.
+        const normalizedHost = window.location.hostname.replace(/^www\./, "");
+        const hostSite = PORTFOLIO_SITES.find((site) => site.domain === normalizedHost);
+        if (hostSite) {
+          await trackPortfolioSiteView(hostSite);
         }
       }
 
@@ -294,6 +515,8 @@
       async function init() {
         await trackPageView();
         await refresh();
+        renderSiteButtons();
+        await refreshPortfolioTracker();
         document.getElementById("feature-btn").addEventListener("click", onFeatureClick);
       }
 
