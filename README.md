@@ -200,29 +200,6 @@ me.say_hi()
 
 <div align="center">
 
-### 🔥 Active Development
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/MAKaminski/SysMemory">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=MAKaminski&repo=SysMemory&theme=radical&border_radius=10" alt="SysMemory - System Memory Management Tool">
-      </a>
-      <br>
-      <strong>🚀 Latest Project</strong><br>
-      <em>System memory optimization and monitoring</em>
-    </td>
-  </tr>
-</table>
-
-### 🧭 Background Snapshot
-
-_Based on your public profile context (website + LinkedIn + GitHub):_
-
-- Technology executive focused on strategy through execution
-- Core areas: fintech, product, analytics, and engineering leadership
-- Based in Atlanta, GA
-
 ### 🗂️ Selected Public GitHub Projects
 
 <table>
