@@ -369,14 +369,14 @@ me.say_hi()
 <summary><b>🎨 Frontend Development</b></summary>
 <br>
 
-![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
-![WordPress](https://img.shields.io/badge/-WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
+[![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
+[![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+[![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
+[![WordPress](https://img.shields.io/badge/-WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)](https://developer.wordpress.org/)
 
 </details>
 
@@ -384,11 +384,11 @@ me.say_hi()
 <summary><b>📱 Mobile Development</b></summary>
 <br>
 
-![iOS](https://img.shields.io/badge/-iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
-![Swift](https://img.shields.io/badge/-Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![Objective-C](https://img.shields.io/badge/-Objective--C-1572B6?style=for-the-badge&logo=apple&logoColor=white)
-![tvOS](https://img.shields.io/badge/-tvOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Android](https://img.shields.io/badge/-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+[![iOS](https://img.shields.io/badge/-iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://developer.apple.com/ios/)
+[![Swift](https://img.shields.io/badge/-Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.org/documentation/)
+[![Objective-C](https://img.shields.io/badge/-Objective--C-1572B6?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/documentation/objectivec)
+[![tvOS](https://img.shields.io/badge/-tvOS-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/tvos/)
+[![Android](https://img.shields.io/badge/-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/docs)
 
 </details>
 
@@ -396,14 +396,14 @@ me.say_hi()
 <summary><b>⚙️ Backend & APIs</b></summary>
 <br>
 
-![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Django](https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![Ruby on Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
-![Go](https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Hapi](https://img.shields.io/badge/-Hapi-F58220?style=for-the-badge&logo=hapi&logoColor=white)
-![VBA](https://img.shields.io/badge/-VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+[![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://docs.python.org/3/)
+[![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/docs)
+[![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Django](https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://docs.djangoproject.com/)
+[![Ruby on Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)](https://guides.rubyonrails.org/)
+[![Go](https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/doc/)
+[![Hapi](https://img.shields.io/badge/-Hapi-F58220?style=for-the-badge&logo=hapi&logoColor=white)](https://hapi.dev/)
+[![VBA](https://img.shields.io/badge/-VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](https://learn.microsoft.com/en-us/office/vba/api/overview/)
 
 </details>
 
@@ -411,23 +411,23 @@ me.say_hi()
 <summary><b>🤖 Machine Learning & AI</b></summary>
 <br>
 
-![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-FF9A00?style=for-the-badge&logo=huggingface&logoColor=white)
-![MLflow](https://img.shields.io/badge/-MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
-![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+[![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/learn)
+[![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/docs/stable/index.html)
+[![Scikit-learn](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/stable/documentation.html)
+[![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-FF9A00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/docs)
+[![MLflow](https://img.shields.io/badge/-MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)](https://mlflow.org/docs/latest/index.html)
+[![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://docs.jupyter.org/en/latest/)
 
 **🧠 Specialized Skills:**
-![Self-Supervised Learning](https://img.shields.io/badge/-Self--Supervised%20Learning-FF6F00?style=flat-square)
-![Transfer Learning](https://img.shields.io/badge/-Transfer%20Learning-00C853?style=flat-square)
-![Reinforcement Learning](https://img.shields.io/badge/-Reinforcement%20Learning-673AB7?style=flat-square)
-![Transformers](https://img.shields.io/badge/-Transformers-FF6F00?style=flat-square)
-![LLMs](https://img.shields.io/badge/-LLMs-00897B?style=flat-square)
-![Text Embeddings](https://img.shields.io/badge/-Text%20Embeddings-3949AB?style=flat-square)
-![GPT](https://img.shields.io/badge/-GPT-4285F4?style=flat-square)
-![FFT](https://img.shields.io/badge/-FFT-9C27B0?style=flat-square)
-![Digital Signal Processing](https://img.shields.io/badge/-DSP-FF5722?style=flat-square)
+[![Self-Supervised Learning](https://img.shields.io/badge/-Self--Supervised%20Learning-FF6F00?style=flat-square)](https://en.wikipedia.org/wiki/Self-supervised_learning)
+[![Transfer Learning](https://img.shields.io/badge/-Transfer%20Learning-00C853?style=flat-square)](https://en.wikipedia.org/wiki/Transfer_learning)
+[![Reinforcement Learning](https://img.shields.io/badge/-Reinforcement%20Learning-673AB7?style=flat-square)](https://en.wikipedia.org/wiki/Reinforcement_learning)
+[![Transformers](https://img.shields.io/badge/-Transformers-FF6F00?style=flat-square)](https://huggingface.co/docs/transformers/index)
+[![LLMs](https://img.shields.io/badge/-LLMs-00897B?style=flat-square)](https://huggingface.co/docs/transformers/en/llm_tutorial)
+[![Text Embeddings](https://img.shields.io/badge/-Text%20Embeddings-3949AB?style=flat-square)](https://platform.openai.com/docs/guides/embeddings)
+[![GPT](https://img.shields.io/badge/-GPT-4285F4?style=flat-square)](https://platform.openai.com/docs/models)
+[![FFT](https://img.shields.io/badge/-FFT-9C27B0?style=flat-square)](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
+[![Digital Signal Processing](https://img.shields.io/badge/-DSP-FF5722?style=flat-square)](https://en.wikipedia.org/wiki/Digital_signal_processing)
 
 </details>
 
@@ -435,13 +435,13 @@ me.say_hi()
 <summary><b>📊 Data Science & Analytics</b></summary>
 <br>
 
-![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/-Matplotlib-2C2D72?style=for-the-badge&logo=matplotlib&logoColor=white)
-![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![D3.js](https://img.shields.io/badge/-D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)
+[![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/docs/)
+[![NumPy](https://img.shields.io/badge/-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/doc/)
+[![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)](https://docs.scipy.org/doc/scipy/)
+[![Matplotlib](https://img.shields.io/badge/-Matplotlib-2C2D72?style=for-the-badge&logo=matplotlib&logoColor=white)](https://matplotlib.org/stable/users/index.html)
+[![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com/python/)
+[![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://docs.streamlit.io/)
+[![D3.js](https://img.shields.io/badge/-D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)](https://d3js.org/getting-started)
 
 </details>
 
@@ -449,12 +449,12 @@ me.say_hi()
 <summary><b>☁️ Cloud & DevOps</b></summary>
 <br>
 
-![AWS](https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![GCP](https://img.shields.io/badge/-GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Azure](https://img.shields.io/badge/-Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/-Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
+[![AWS](https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://docs.aws.amazon.com/)
+[![GCP](https://img.shields.io/badge/-GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/docs)
+[![Azure](https://img.shields.io/badge/-Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://learn.microsoft.com/en-us/azure/)
+[![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/)
+[![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/docs/home/)
+[![Apache Airflow](https://img.shields.io/badge/-Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)](https://airflow.apache.org/docs/)
 
 </details>
 
@@ -463,19 +463,19 @@ me.say_hi()
 <br>
 
 **Relational:**
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
-![Snowflake](https://img.shields.io/badge/-Snowflake-56B4E9?style=for-the-badge&logo=snowflake&logoColor=white)
+[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/docs/)
+[![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://dev.mysql.com/doc/)
+[![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/docs.html)
+[![Snowflake](https://img.shields.io/badge/-Snowflake-56B4E9?style=for-the-badge&logo=snowflake&logoColor=white)](https://docs.snowflake.com/)
 
 **NoSQL & Vector:**
-![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Elasticsearch](https://img.shields.io/badge/-Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
-![Pinecone](https://img.shields.io/badge/-Pinecone-3399FF?style=for-the-badge&logo=pinecone&logoColor=white)
-![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Parse](https://img.shields.io/badge/-Parse-249EDA?style=for-the-badge&logo=parse&logoColor=white)
-![Realm](https://img.shields.io/badge/-Realm-39477F?style=for-the-badge&logo=realm&logoColor=white)
+[![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/docs/)
+[![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/docs/latest/)
+[![Elasticsearch](https://img.shields.io/badge/-Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)](https://www.elastic.co/guide/index.html)
+[![Pinecone](https://img.shields.io/badge/-Pinecone-3399FF?style=for-the-badge&logo=pinecone&logoColor=white)](https://docs.pinecone.io/)
+[![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/docs)
+[![Parse](https://img.shields.io/badge/-Parse-249EDA?style=for-the-badge&logo=parse&logoColor=white)](https://docs.parseplatform.org/)
+[![Realm](https://img.shields.io/badge/-Realm-39477F?style=for-the-badge&logo=realm&logoColor=white)](https://www.mongodb.com/docs/realm/)
 
 </details>
 
