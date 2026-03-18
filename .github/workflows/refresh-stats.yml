@@ -2,14 +2,14 @@
 # by fetching from external APIs and committing SVGs to the repo.
 # README references these local assets for reliable, up-to-date display.
 #
-# Schedule: every 6 hours (balance between freshness and API rate limits)
+# Schedule: every 5 minutes (GitHub's minimum; may hit external API rate limits)
 # Manual: workflow_dispatch
 
 name: Refresh Profile Stats
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/5 * * * *"
   push:
     branches: [main]
     paths:
