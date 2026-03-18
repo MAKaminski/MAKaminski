@@ -15,6 +15,20 @@
 
 ---
 
+## 🔮 Cursor Token Usage (Enterprise)
+
+<div align="center">
+
+[![Cursor Snapshots Today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FMAKaminski%2FMAKaminski%2Fmain%2Fdata%2Fcursor_usage_latest.json&query=%24.snapshots_today&label=Cursor%20Snapshots%20Today&style=for-the-badge&color=9400D3)](#cursor-usage)
+
+_Stored in `data/cursor_usage.db` (SQLite). Hourly refresh via [workflow](.github/workflows/cursor-usage.yml). Project allocation in `by_project`. Requires `CURSOR_API_KEY` (Enterprise)._
+
+<a id="cursor-usage"></a>
+
+</div>
+
+---
+
 ## 📍 Interaction Tracker (Beta)
 
 <div align="center">
