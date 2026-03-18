@@ -237,22 +237,22 @@ me.say_hi()
 
 <div align="center">
   
-  _Auto-generated from GitHub data for @MAKaminski (cards can be cached briefly). Private contribution signals are included when GitHub visibility/API permits._
+  _Auto-refreshed every 6 hours via [GitHub Actions](.github/workflows/refresh-stats.yml). Private contribution signals included when GitHub visibility/API permits._
   
-  ![GitHub Stats (All Commits, Private-Aware)](https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github)
-  ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10)
+  ![GitHub Stats (All Commits, Private-Aware)](assets/stats/github-stats.svg)
+  ![GitHub Streak](assets/stats/github-streak.svg)
   
-  ![GitHub Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical)
+  ![GitHub Profile Summary](assets/stats/profile-details.svg)
   
   <details>
     <summary>📈 Private-Aware Detailed Stats & Graphs</summary>
     <br>
     
-  ![Commits by Hour](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical)
-  ![Repository LOC Mix (Relative)](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical)
-  ![Top Languages (Relative LOC)](https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10&langs_count=8)
-  ![Most Used Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical)
-  ![Contribution Activity](https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true)
+  ![Commits by Hour](assets/stats/productive-time.svg)
+  ![Repository LOC Mix (Relative)](assets/stats/repos-per-language.svg)
+  ![Top Languages (Relative LOC)](assets/stats/top-langs.svg)
+  ![Most Used Languages](assets/stats/most-commit-language.svg)
+  ![Contribution Activity](assets/stats/activity-graph.svg)
   
   ### 🔎 Metric Coverage
   
@@ -263,7 +263,7 @@ me.say_hi()
   
   ### 🏆 Achievement Showcase
   
-  ![Trophies](https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage)
+  ![Trophies](assets/stats/trophies.svg)
     
   </details>
   
@@ -549,7 +549,7 @@ _Project and impact highlights are summarized above under Featured Projects & Po
   
   ### 📊 Real-time Activity
   
-  ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true)
+  ![Activity Graph](assets/stats/activity-graph.svg)
   
   ---
   
