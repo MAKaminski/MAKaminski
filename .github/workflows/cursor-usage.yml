@@ -1,0 +1,45 @@
+# Fetches Cursor usage from Analytics API (Enterprise) and appends to SQLite.
+# Runs hourly. Requires CURSOR_API_KEY secret (Admin API key from cursor.com/dashboard).
+#
+# Data: data/cursor_usage.db (SQLite), data/cursor_usage_latest.json (summary for badges)
+# Schema supports project allocation and graphing.
+
+name: Cursor Usage Tracker
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch Cursor usage and update DB
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+        run: python scripts/fetch_cursor_usage.py
+        continue-on-error: true
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update Cursor usage snapshot [automated]"
+            git push
+          fi
