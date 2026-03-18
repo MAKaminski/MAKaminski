@@ -11,6 +11,7 @@ import json
 import os
 import sqlite3
 import sys
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -35,26 +36,34 @@ def init_db(conn: sqlite3.Connection) -> None:
     conn.commit()
 
 
-def _get(url: str, api_key: str) -> dict | None:
+ENTERPRISE_REQUIRED = "NEED TO UPGRADE TO ENTERPRISE PLAN TO RETURN VALUE"
+
+
+def _get(url: str, api_key: str) -> tuple[dict | None, str | None]:
+    """Returns (data, error_message). error_message set on 401/403."""
     req = urllib.request.Request(url, headers=_auth_header(api_key))
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            return json.loads(r.read().decode())
-    except Exception:
-        return None
+            return (json.loads(r.read().decode()), None)
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403):
+            return (None, ENTERPRISE_REQUIRED)
+        return (None, str(e))
+    except Exception as e:
+        return (None, str(e))
 
 
-def fetch_agent_edits(api_key: str, start_date: str, end_date: str) -> dict | None:
+def fetch_agent_edits(api_key: str, start_date: str, end_date: str) -> tuple[dict | None, str | None]:
     url = f"{API_BASE}/analytics/team/agent-edits?startDate={start_date}&endDate={end_date}"
     return _get(url, api_key)
 
 
-def fetch_tabs(api_key: str, start_date: str, end_date: str) -> dict | None:
+def fetch_tabs(api_key: str, start_date: str, end_date: str) -> tuple[dict | None, str | None]:
     url = f"{API_BASE}/analytics/team/tabs?startDate={start_date}&endDate={end_date}"
     return _get(url, api_key)
 
 
-def fetch_ai_commits(api_key: str, start_date: str, end_date: str) -> dict | None:
+def fetch_ai_commits(api_key: str, start_date: str, end_date: str) -> tuple[dict | None, str | None]:
     """AI Code Tracking API: per-commit, per-repo (project allocation)."""
     url = f"{API_BASE}/analytics/ai-code/commits?startDate={start_date}&endDate={end_date}&pageSize=100"
     return _get(url, api_key)
@@ -64,6 +73,14 @@ def main() -> int:
     api_key = os.environ.get("CURSOR_API_KEY")
     if not api_key or not api_key.strip():
         print("CURSOR_API_KEY not set; skipping Cursor usage fetch")
+        summary_path = get_db_path().parent / "cursor_usage_latest.json"
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(
+            json.dumps(
+                {"display_value": "CURSOR_API_KEY not set", "snapshots_today": 0},
+                indent=2,
+            )
+        )
         return 0
 
     db_path = get_db_path()
@@ -77,10 +94,13 @@ def main() -> int:
     today = now.strftime("%Y-%m-%d")
 
     inserted = 0
+    api_error = None
 
     # Agent edits (daily aggregates from Cursor Analytics API)
-    agent_data = fetch_agent_edits(api_key, today, today)
-    if agent_data and agent_data.get("data"):
+    agent_data, err = fetch_agent_edits(api_key, today, today)
+    if err:
+        api_error = err
+    elif agent_data and agent_data.get("data"):
         for row in agent_data["data"]:
             conn.execute(
                 """
@@ -91,39 +111,60 @@ def main() -> int:
             )
             inserted += 1
 
-    # Tabs (Tab autocomplete usage)
-    tabs_data = fetch_tabs(api_key, today, today)
-    if tabs_data and tabs_data.get("data"):
-        for row in tabs_data["data"]:
-            conn.execute(
-                """
-                INSERT INTO usage_snapshots (recorded_at, metric_type, project, value_json, source)
-                VALUES (?, 'tabs', NULL, ?, 'cursor_analytics')
-                """,
-                (hour_bucket, json.dumps(row)),
-            )
-            inserted += 1
+    # Tabs (Tab autocomplete usage) - skip if we already hit an API error
+    if not api_error:
+        tabs_data, err = fetch_tabs(api_key, today, today)
+        if err:
+            api_error = err
+        elif tabs_data and tabs_data.get("data"):
+            for row in tabs_data["data"]:
+                conn.execute(
+                    """
+                    INSERT INTO usage_snapshots (recorded_at, metric_type, project, value_json, source)
+                    VALUES (?, 'tabs', NULL, ?, 'cursor_analytics')
+                    """,
+                    (hour_bucket, json.dumps(row)),
+                )
+                inserted += 1
 
     # AI Code commits (per-repo for project allocation)
-    ai_commits = fetch_ai_commits(api_key, today, today)
-    if ai_commits and ai_commits.get("commits"):
-        for commit in ai_commits["commits"]:
-            project = commit.get("repoName") or commit.get("repository")
-            conn.execute(
-                """
-                INSERT INTO usage_snapshots (recorded_at, metric_type, project, user_id, value_json, source)
-                VALUES (?, 'ai_commits', ?, ?, ?, 'cursor_ai_code')
-                """,
-                (
-                    hour_bucket,
-                    project,
-                    commit.get("userEmail") or commit.get("userId"),
-                    json.dumps(commit),
-                ),
-            )
-            inserted += 1
+    if not api_error:
+        ai_commits, err = fetch_ai_commits(api_key, today, today)
+        if err:
+            api_error = err
+        elif ai_commits and ai_commits.get("commits"):
+            for commit in ai_commits["commits"]:
+                project = commit.get("repoName") or commit.get("repository")
+                conn.execute(
+                    """
+                    INSERT INTO usage_snapshots (recorded_at, metric_type, project, user_id, value_json, source)
+                    VALUES (?, 'ai_commits', ?, ?, ?, 'cursor_ai_code')
+                    """,
+                    (
+                        hour_bucket,
+                        project,
+                        commit.get("userEmail") or commit.get("userId"),
+                        json.dumps(commit),
+                    ),
+                )
+                inserted += 1
 
     conn.commit()
+
+    # If API error (e.g. Pro plan → 401/403), write display value for badge
+    if api_error:
+        summary = {
+            "display_value": api_error,
+            "snapshots_today": 0,
+            "recorded_at": hour_bucket,
+            "last_7d": {},
+            "by_project": {},
+        }
+        summary_path = db_path.parent / "cursor_usage_latest.json"
+        summary_path.write_text(json.dumps(summary, indent=2))
+        conn.close()
+        print(f"API error: {api_error}; wrote to {summary_path}")
+        return 0
 
     # Aggregate for summary (last 7 days for graphing context)
     cursor = conn.execute(
@@ -151,6 +192,7 @@ def main() -> int:
 
     # Write summary JSON for badge display
     summary = {
+        "display_value": str(inserted),
         "recorded_at": hour_bucket,
         "snapshots_today": inserted,
         "last_7d": metric_counts,

@@ -1,6 +1,7 @@
 {
-  "recorded_at": null,
+  "display_value": "NEED TO UPGRADE TO ENTERPRISE PLAN TO RETURN VALUE",
   "snapshots_today": 0,
+  "recorded_at": null,
   "last_7d": {},
-  "note": "Populated by cursor-usage workflow when CURSOR_API_KEY is set (Enterprise)"
+  "by_project": {}
 }
