@@ -4,6 +4,9 @@
 #
 # Schedule: every 5 minutes (GitHub's minimum; may hit external API rate limits)
 # Manual: workflow_dispatch
+#
+# Upstream SVG hosts (Vercel/Heroku) often return 503 under load; curl retries
+# reduce spurious workflow failures.
 
 name: Refresh Profile Stats
 
@@ -29,42 +32,26 @@ jobs:
       - name: Create assets directory
         run: mkdir -p assets/stats
 
-      - name: Fetch GitHub Stats (all commits, private-aware)
+      - name: Fetch profile stat SVGs
         run: |
-          curl -fsSL "https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github" -o assets/stats/github-stats.svg
-
-      - name: Fetch GitHub Streak
-        run: |
-          curl -fsSL "https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10" -o assets/stats/github-streak.svg
-
-      - name: Fetch GitHub Profile Summary
-        run: |
-          curl -fsSL "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical" -o assets/stats/profile-details.svg
-
-      - name: Fetch Commits by Hour
-        run: |
-          curl -fsSL "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical" -o assets/stats/productive-time.svg
-
-      - name: Fetch Repos per Language
-        run: |
-          curl -fsSL "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical" -o assets/stats/repos-per-language.svg
-
-      - name: Fetch Top Languages
-        run: |
-          curl -fsSL "https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10&langs_count=8" -o assets/stats/top-langs.svg
-
-      - name: Fetch Most Used Languages
-        run: |
-          curl -fsSL "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical" -o assets/stats/most-commit-language.svg
-
-      - name: Fetch Contribution Activity Graph
-        run: |
-          curl -fsSL "https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true" -o assets/stats/activity-graph.svg
+          set -euo pipefail
+          # Transient 5xx from third-party hosts; curl --retry handles backoff.
+          CURL="curl -fsSL --connect-timeout 25 --max-time 120 --retry 8 --retry-delay 5 --retry-max-time 300"
+          $CURL "https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github" -o assets/stats/github-stats.svg
+          $CURL "https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10" -o assets/stats/github-streak.svg
+          $CURL "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical" -o assets/stats/profile-details.svg
+          $CURL "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical" -o assets/stats/productive-time.svg
+          $CURL "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical" -o assets/stats/repos-per-language.svg
+          $CURL "https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10&langs_count=8" -o assets/stats/top-langs.svg
+          $CURL "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical" -o assets/stats/most-commit-language.svg
+          $CURL "https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true" -o assets/stats/activity-graph.svg
 
       - name: Fetch Trophies
         continue-on-error: true
         run: |
-          curl -fsSL "https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage" -o assets/stats/trophies.svg
+          curl -fsSL --connect-timeout 25 --max-time 120 --retry 8 --retry-delay 5 --retry-max-time 300 \
+            "https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage" \
+            -o assets/stats/trophies.svg
 
       - name: Commit and push if changed
         run: |
