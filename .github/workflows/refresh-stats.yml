@@ -2,7 +2,7 @@
 # by fetching from external APIs and committing SVGs to the repo.
 # README references these local assets for reliable, up-to-date display.
 #
-# Schedule: every 5 minutes (GitHub's minimum; may hit external API rate limits)
+# Schedule: every 10 minutes to reduce upstream 5xx/rate-limit failures
 # Manual: workflow_dispatch
 #
 # Upstream SVG hosts (Vercel/Heroku) often return 503 under load; curl retries
@@ -12,7 +12,7 @@ name: Refresh Profile Stats
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
   push:
     branches: [main]
     paths:
