@@ -251,7 +251,7 @@ me.say_hi()
 
 <div align="center">
   
-  _Auto-refreshed every 5 minutes via [GitHub Actions](.github/workflows/refresh-stats.yml). Private contribution signals included when GitHub visibility/API permits._
+  _Auto-refreshed every 10 minutes via [GitHub Actions](.github/workflows/refresh-stats.yml). Private contribution signals included when GitHub visibility/API permits._
   
   ![GitHub Stats (All Commits, Private-Aware)](assets/stats/github-stats.svg)
   ![GitHub Streak](assets/stats/github-streak.svg)
