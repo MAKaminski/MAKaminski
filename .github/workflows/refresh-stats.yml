@@ -24,10 +24,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  refresh:
-    runs-on: ubuntu-latest
+  refresh_depot:
+    runs-on: depot-ubuntu-latest
+    continue-on-error: true
     permissions:
       contents: write
+    outputs:
+      depot_refresh_succeeded: ${{ steps.depot_result.outputs.succeeded }}
+      depot_failure_reason: ${{ steps.depot_result.outputs.reason }}
 
     steps:
       - name: Checkout repository
@@ -36,85 +40,92 @@ jobs:
       - name: Create assets directory
         run: mkdir -p assets/stats
 
-      - name: Fetch profile stat SVGs
+      - name: Validate Depot token availability
+        id: depot_token
+        env:
+          DEPOT_TOKEN: ${{ secrets.DEPOT_TOKEN }}
         run: |
           set -euo pipefail
-          fetch_svg() {
-            local output="$1"
-            local url="$2"
-            local tmp
-            tmp="$(mktemp)"
-
-            if curl -fsSL --connect-timeout 25 --max-time 120 --retry 8 --retry-delay 5 --retry-max-time 300 "$url" -o "$tmp"; then
-              if grep -qi "<svg" "$tmp"; then
-                mv "$tmp" "$output"
-                echo "Updated $(basename "$output")"
-                return 0
-              fi
-              echo "::warning::Non-SVG payload returned for $(basename "$output"); keeping previous file."
-            else
-              echo "::warning::Fetch failed for $(basename "$output"); keeping previous file."
-            fi
-
-            rm -f "$tmp"
-            return 1
-          }
-
-          successes=0
-          failures=0
-
-          if fetch_svg "assets/stats/github-stats.svg" "https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/github-streak.svg" "https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/profile-details.svg" "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/productive-time.svg" "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/repos-per-language.svg" "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/top-langs.svg" "https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10&langs_count=8"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/most-commit-language.svg" "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/activity-graph.svg" "https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-
-          echo "Stats refresh summary: success=${successes}, failed=${failures}"
-          if [ "$successes" -eq 0 ]; then
-            echo "::warning::No stat cards refreshed this run."
+          if [ -n "${DEPOT_TOKEN:-}" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Fetch Trophies
+      - name: Run refresh on Depot runner
+        id: depot_refresh
+        if: ${{ steps.depot_token.outputs.available == 'true' }}
         continue-on-error: true
+        env:
+          REFRESH_EXECUTION_MODE: depot
         run: |
           set -euo pipefail
-          tmp="$(mktemp)"
-          if curl -fsSL --connect-timeout 25 --max-time 120 --retry 8 --retry-delay 5 --retry-max-time 300 \
-            "https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage" \
-            -o "$tmp" && grep -qi "<svg" "$tmp"; then
-            mv "$tmp" assets/stats/trophies.svg
-            echo "Updated trophies.svg"
-          else
-            rm -f "$tmp"
-            echo "::warning::Trophies endpoint unavailable; keeping previous file."
-          fi
+          bash ./scripts/refresh_profile_stats.sh
 
-      - name: Commit and push if changed
+      - name: Compute Depot result
+        id: depot_result
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/stats/
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
+          succeeded="false"
+          reason="Depot job did not execute"
+          if [ "${{ steps.depot_token.outputs.available }}" != "true" ]; then
+            reason="DEPOT_TOKEN secret is missing"
+          elif [ "${{ steps.depot_refresh.outcome }}" = "success" ]; then
+            succeeded="true"
+            reason="none"
+          elif [ "${{ steps.depot_refresh.outcome }}" = "failure" ]; then
+            reason="Depot runner execution failed"
+          elif [ "${{ steps.depot_refresh.outcome }}" = "cancelled" ]; then
+            reason="Depot runner execution cancelled"
           else
-            git commit -m "chore: refresh profile stats [automated]"
-            if git pull --rebase origin main && git push; then
-              echo "Push succeeded"
-              exit 0
-            fi
-
-            for delay in 4 8 16 32; do
-              echo "::warning::Push failed; retrying in ${delay}s"
-              sleep "$delay"
-              if git pull --rebase origin main && git push; then
-                echo "Push succeeded after retry"
-                exit 0
-              fi
-            done
-
-            echo "::warning::All push attempts failed; refresh commit remains local to this run."
+            reason="Depot runner execution unavailable"
           fi
+          echo "succeeded=${succeeded}" >> "$GITHUB_OUTPUT"
+          echo "reason=${reason}" >> "$GITHUB_OUTPUT"
+          if [ "$succeeded" = "true" ]; then
+            {
+              echo "## Depot status"
+              echo ""
+              echo ":white_check_mark: Depot runner refresh succeeded."
+            } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::warning::DEPOT_FALLBACK_ACTIVE: ${reason}. GitHub-hosted fallback job will run."
+          fi
+
+  refresh_github_fallback:
+    runs-on: ubuntu-latest
+    needs: [refresh_depot]
+    if: ${{ always() && (needs.refresh_depot.result != 'success' || needs.refresh_depot.outputs.depot_refresh_succeeded != 'true') }}
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create assets directory
+        run: mkdir -p assets/stats
+
+      - name: Run refresh on GitHub-hosted fallback runner
+        env:
+          REFRESH_EXECUTION_MODE: github_fallback
+        run: |
+          set -euo pipefail
+          bash ./scripts/refresh_profile_stats.sh
+
+      - name: Raise Depot fallback alarm
+        run: |
+          set -euo pipefail
+          reason="${{ needs.refresh_depot.outputs.depot_failure_reason }}"
+          if [ -z "$reason" ] || [ "$reason" = "none" ]; then
+            reason="Depot runner unavailable (job result: ${{ needs.refresh_depot.result }})"
+          fi
+          echo "::warning::DEPOT_FALLBACK_ACTIVE: ${reason}. Refresh completed via GitHub-hosted runner."
+          {
+            echo "## Depot status"
+            echo ""
+            echo ":warning: **DEPOT_FALLBACK_ACTIVE**"
+            echo ""
+            echo "- Reason: ${reason}"
+            echo "- Action: Fallback refresh executed on GitHub-hosted runner"
+            echo "- Check: `DEPOT_TOKEN` secret validity and Depot plan/status"
+          } >> "$GITHUB_STEP_SUMMARY"
