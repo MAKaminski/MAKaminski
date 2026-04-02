@@ -32,6 +32,34 @@ class FetchCursorUsageTests(unittest.TestCase):
         self.assertIsNone(data)
         self.assertEqual(err, fetch_cursor_usage.ENTERPRISE_REQUIRED)
 
+    def test_get_returns_enterprise_required_for_403(self) -> None:
+        error = urllib.error.HTTPError(
+            url="https://example.com",
+            code=403,
+            msg="Forbidden",
+            hdrs=None,
+            fp=None,
+        )
+        with patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=error):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertEqual(err, fetch_cursor_usage.ENTERPRISE_REQUIRED)
+
+    def test_get_returns_http_error_message_for_non_auth_failure(self) -> None:
+        error = urllib.error.HTTPError(
+            url="https://example.com",
+            code=500,
+            msg="Server Error",
+            hdrs=None,
+            fp=None,
+        )
+        with patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=error):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertIn("HTTP Error 500", err)
+
     def test_main_writes_summary_when_api_key_missing(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             db_path = Path(temp_dir) / "cursor_usage.db"
@@ -115,6 +143,39 @@ class FetchCursorUsageTests(unittest.TestCase):
                 conn.close()
 
             self.assertEqual(total_rows, 6)
+
+    def test_main_stops_before_ai_commits_when_tabs_call_errors(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            db_path = Path(temp_dir) / "cursor_usage.db"
+            summary_path = Path(temp_dir) / "cursor_usage_latest.json"
+
+            agent_edits = {"data": [{"acceptedLinesAdded": 10}]}
+
+            with (
+                patch("scripts.fetch_cursor_usage.get_db_path", return_value=db_path),
+                patch.dict(os.environ, {"CURSOR_API_KEY": "key"}, clear=True),
+                patch("scripts.fetch_cursor_usage.fetch_agent_edits", return_value=(agent_edits, None)),
+                patch("scripts.fetch_cursor_usage.fetch_tabs", return_value=(None, "tabs api failure")),
+                patch("scripts.fetch_cursor_usage.fetch_ai_commits") as fetch_ai_commits_mock,
+            ):
+                rc = fetch_cursor_usage.main()
+
+            self.assertEqual(rc, 0)
+            fetch_ai_commits_mock.assert_not_called()
+
+            summary = json.loads(summary_path.read_text())
+            self.assertEqual(summary["display_value"], "tabs api failure")
+            self.assertEqual(summary["snapshots_today"], 0)
+
+            conn = sqlite3.connect(db_path)
+            try:
+                total_rows = conn.execute("SELECT COUNT(*) FROM usage_snapshots").fetchone()[0]
+                metric_types = [row[0] for row in conn.execute("SELECT metric_type FROM usage_snapshots")]
+            finally:
+                conn.close()
+
+            self.assertEqual(total_rows, 1)
+            self.assertEqual(metric_types, ["agent_edits"])
 
 
 if __name__ == "__main__":
