@@ -32,6 +32,34 @@ class FetchCursorUsageTests(unittest.TestCase):
         self.assertIsNone(data)
         self.assertEqual(err, fetch_cursor_usage.ENTERPRISE_REQUIRED)
 
+    def test_get_returns_enterprise_required_for_403(self) -> None:
+        error = urllib.error.HTTPError(
+            url="https://example.com",
+            code=403,
+            msg="Forbidden",
+            hdrs=None,
+            fp=None,
+        )
+        with patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=error):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertEqual(err, fetch_cursor_usage.ENTERPRISE_REQUIRED)
+
+    def test_get_returns_http_error_string_for_non_auth_http_errors(self) -> None:
+        error = urllib.error.HTTPError(
+            url="https://example.com",
+            code=500,
+            msg="Server Error",
+            hdrs=None,
+            fp=None,
+        )
+        with patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=error):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertEqual(err, "HTTP Error 500: Server Error")
+
     def test_main_writes_summary_when_api_key_missing(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             db_path = Path(temp_dir) / "cursor_usage.db"
@@ -70,6 +98,35 @@ class FetchCursorUsageTests(unittest.TestCase):
 
             summary = json.loads(summary_path.read_text())
             self.assertEqual(summary["display_value"], "api boom")
+            self.assertEqual(summary["snapshots_today"], 0)
+            self.assertEqual(summary["last_7d"], {})
+            self.assertEqual(summary["by_project"], {})
+
+    def test_main_maps_403_to_enterprise_message_and_short_circuits_fetches(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            db_path = Path(temp_dir) / "cursor_usage.db"
+            summary_path = Path(temp_dir) / "cursor_usage_latest.json"
+            forbidden = urllib.error.HTTPError(
+                url="https://api.cursor.com/analytics/team/agent-edits",
+                code=403,
+                msg="Forbidden",
+                hdrs=None,
+                fp=None,
+            )
+
+            with (
+                patch("scripts.fetch_cursor_usage.get_db_path", return_value=db_path),
+                patch.dict(os.environ, {"CURSOR_API_KEY": "key"}, clear=True),
+                patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=forbidden) as urlopen_mock,
+            ):
+                rc = fetch_cursor_usage.main()
+
+            self.assertEqual(rc, 0)
+            # A forbidden error on the first API call should stop additional fetches.
+            self.assertEqual(urlopen_mock.call_count, 1)
+
+            summary = json.loads(summary_path.read_text())
+            self.assertEqual(summary["display_value"], fetch_cursor_usage.ENTERPRISE_REQUIRED)
             self.assertEqual(summary["snapshots_today"], 0)
             self.assertEqual(summary["last_7d"], {})
             self.assertEqual(summary["by_project"], {})
