@@ -23,6 +23,8 @@
 
 _Stored in `data/cursor_usage.db` (SQLite). Hourly refresh via [workflow](.github/workflows/cursor-usage.yml). Project allocation in `by_project`. Requires `CURSOR_API_KEY` (Enterprise)._
 
+_Operational details and troubleshooting: [`data/README.md`](data/README.md)._
+
 <a id="cursor-usage"></a>
 
 </div>
