@@ -32,6 +32,45 @@ class FetchCursorUsageTests(unittest.TestCase):
         self.assertIsNone(data)
         self.assertEqual(err, fetch_cursor_usage.ENTERPRISE_REQUIRED)
 
+    def test_get_returns_enterprise_required_for_403(self) -> None:
+        error = urllib.error.HTTPError(
+            url="https://example.com",
+            code=403,
+            msg="Forbidden",
+            hdrs=None,
+            fp=None,
+        )
+        with patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=error):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertEqual(err, fetch_cursor_usage.ENTERPRISE_REQUIRED)
+
+    def test_get_returns_error_text_for_non_auth_http_error(self) -> None:
+        error = urllib.error.HTTPError(
+            url="https://example.com",
+            code=500,
+            msg="Internal Server Error",
+            hdrs=None,
+            fp=None,
+        )
+        with patch("scripts.fetch_cursor_usage.urllib.request.urlopen", side_effect=error):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertIsNotNone(err)
+        self.assertIn("HTTP Error 500", err)
+
+    def test_get_returns_error_text_for_unexpected_exception(self) -> None:
+        with patch(
+            "scripts.fetch_cursor_usage.urllib.request.urlopen",
+            side_effect=RuntimeError("network down"),
+        ):
+            data, err = fetch_cursor_usage._get("https://example.com", "irrelevant")
+
+        self.assertIsNone(data)
+        self.assertEqual(err, "network down")
+
     def test_main_writes_summary_when_api_key_missing(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             db_path = Path(temp_dir) / "cursor_usage.db"
@@ -73,6 +112,38 @@ class FetchCursorUsageTests(unittest.TestCase):
             self.assertEqual(summary["snapshots_today"], 0)
             self.assertEqual(summary["last_7d"], {})
             self.assertEqual(summary["by_project"], {})
+
+    def test_main_keeps_inserted_rows_when_later_api_call_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            db_path = Path(temp_dir) / "cursor_usage.db"
+            summary_path = Path(temp_dir) / "cursor_usage_latest.json"
+            agent_edits = {"data": [{"acceptedLinesAdded": 10}, {"acceptedLinesAdded": 2}]}
+
+            with (
+                patch("scripts.fetch_cursor_usage.get_db_path", return_value=db_path),
+                patch.dict(os.environ, {"CURSOR_API_KEY": "key"}, clear=True),
+                patch("scripts.fetch_cursor_usage.fetch_agent_edits", return_value=(agent_edits, None)),
+                patch("scripts.fetch_cursor_usage.fetch_tabs", return_value=(None, "tabs boom")),
+                patch("scripts.fetch_cursor_usage.fetch_ai_commits") as fetch_ai_commits_mock,
+            ):
+                rc = fetch_cursor_usage.main()
+
+            self.assertEqual(rc, 0)
+            fetch_ai_commits_mock.assert_not_called()
+
+            summary = json.loads(summary_path.read_text())
+            self.assertEqual(summary["display_value"], "tabs boom")
+            self.assertEqual(summary["snapshots_today"], 0)
+            self.assertEqual(summary["last_7d"], {})
+            self.assertEqual(summary["by_project"], {})
+
+            conn = sqlite3.connect(db_path)
+            try:
+                total_rows = conn.execute("SELECT COUNT(*) FROM usage_snapshots").fetchone()[0]
+            finally:
+                conn.close()
+
+            self.assertEqual(total_rows, 2)
 
     def test_main_aggregates_successful_responses_and_persists_rows(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
