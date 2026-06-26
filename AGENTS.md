@@ -29,5 +29,10 @@ If sources conflict, ask for clarification or choose the most conservative wordi
 - Avoid hardcoded metrics that can drift (or clearly label them as static).
 
 ## Non-goals
-- Do not add application code, build tooling, or runtime dependencies.
+- Do not add application code, build tooling, or runtime dependencies *beyond the sanctioned profile-automation tooling* in `cursor-usage/` (a small Rust binary that powers the Cursor-usage badge) and the GitHub Actions under `.github/workflows/`.
 - Do not invent timelines, titles, or company affiliations.
+
+## Profile automation (`cursor-usage/`)
+- The Cursor-usage badge is backed by a Rust binary (`cursor-usage/`, tested with `cargo test`).
+- Keep the on-disk data contract stable: `data/cursor_usage.db` (SQLite via `data/schema.sql`) and `data/cursor_usage_latest.json` (badge reads `$.display_value`).
+- Prefer graceful, honest fallbacks for the badge (`enterprise only`, `unavailable`) over broken-looking placeholder text.
