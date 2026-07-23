@@ -15,13 +15,14 @@
 
 ---
 
-## 🔮 Cursor Token Usage (Enterprise)
+## 🔮 Cursor Token Usage
 
 <div align="center">
 
-[![Cursor Usage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FMAKaminski%2FMAKaminski%2Fmain%2Fdata%2Fcursor_usage_latest.json&query=%24.display_value&label=Cursor%20Usage&style=for-the-badge&color=9400D3)](#cursor-usage)
+[![Cursor Usage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FMAKaminski%2FMAKaminski%2Fmain%2Fdata%2Fcursor_usage_latest.json&query=%24.display_value&label=Cursor%20Usage&style=for-the-badge&color=9400D3&logo=cursor&logoColor=white)](#cursor-usage)
+[![Powered by Rust](https://img.shields.io/badge/powered%20by-Rust-CE412B?style=for-the-badge&logo=rust&logoColor=white)](cursor-usage/)
 
-_Stored in `data/cursor_usage.db` (SQLite). Hourly refresh via [workflow](.github/workflows/cursor-usage.yml). Project allocation in `by_project`. Requires `CURSOR_API_KEY` (Enterprise)._
+_Collected hourly by a small **Rust** service ([`cursor-usage/`](cursor-usage/)) that snapshots usage into SQLite (`data/cursor_usage.db`) and publishes a badge summary (`data/cursor_usage_latest.json`). Per-project allocation lives in `by_project`. Reads `CURSOR_API_KEY`; falls back to a clean status (`enterprise only`) when the Analytics entitlement is absent._
 
 _Operational details and troubleshooting: [`data/README.md`](data/README.md)._
 
@@ -418,6 +419,7 @@ me.say_hi()
 [![Django](https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://docs.djangoproject.com/)
 [![Ruby on Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)](https://guides.rubyonrails.org/)
 [![Go](https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/doc/)
+[![Rust](https://img.shields.io/badge/-Rust-CE412B?style=for-the-badge&logo=rust&logoColor=white)](https://doc.rust-lang.org/)
 [![Hapi](https://img.shields.io/badge/-Hapi-F58220?style=for-the-badge&logo=hapi&logoColor=white)](https://hapi.dev/)
 [![VBA](https://img.shields.io/badge/-VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](https://learn.microsoft.com/en-us/office/vba/api/overview/)
 
@@ -501,22 +503,51 @@ me.say_hi()
 
 <div align="center">
 
-### 🗂️ Top Repository Highlights (Public + Private-Ready)
+### 🗂️ Top Repository Highlights
 
-| Repository | Visibility | Description |
+| Repository | Tech | What it does |
 |---|---|---|
-| [`alpha-gen-trading`](https://github.com/MAKaminski/alpha-gen-trading) | Public | Real-time trading automation system with VWAP/MA9 crossover strategy for 0DTE QQQ options. |
-| [`real-estate-investment-analysis`](https://github.com/MAKaminski/real-estate-investment-analysis) | Public | Real estate investment analysis with cash-on-cash, appreciation, tax savings, and principal paydown metrics. |
-| [`harness-engineering-alpha-kite`](https://github.com/MAKaminski/harness-engineering-alpha-kite) | Public | Symphony Python service orchestrating coding agents from Linear issue workflows. |
-| [`k-alpha`](https://github.com/MAKaminski/k-alpha) | Public | Trading application. |
-| [`movie_scene_battle_analyzer`](https://github.com/MAKaminski/movie_scene_battle_analyzer) | Public | Description not set on GitHub. |
-| [`alpha-kite-max`](https://github.com/MAKaminski/alpha-kite-max) | Public | Description not set on GitHub. |
-| [`rentEngine`](https://github.com/MAKaminski/rentEngine) | Public | Description not set on GitHub. |
-| [`depot-mcp`](https://github.com/MAKaminski/depot-mcp) | Public | Description not set on GitHub. |
+| [`alpha-gen-trading`](https://github.com/MAKaminski/alpha-gen-trading) | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | Real-time trading automation with a VWAP/MA9 crossover strategy for 0DTE QQQ options. |
+| [`kite-trade`](https://github.com/MAKaminski/kite-trade) | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | Quantitative trading system with real-time monitoring and signal generation. |
+| [`real-estate-investment-analysis`](https://github.com/MAKaminski/real-estate-investment-analysis) | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | Investment analysis across cash-on-cash, appreciation, tax savings, and principal-paydown returns. |
+| [`harness-engineering-alpha-kite`](https://github.com/MAKaminski/harness-engineering-alpha-kite) | ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white) | Symphony — a service that orchestrates coding agents from Linear issue workflows. |
+| [`MacMonitor`](https://github.com/MAKaminski/MacMonitor) | ![Swift](https://img.shields.io/badge/-Swift-FA7343?logo=swift&logoColor=white) | macOS desktop widget for per-core CPU, memory/swap, network, and battery. |
+| [`DesktopLens`](https://github.com/MAKaminski/DesktopLens) | ![Shell](https://img.shields.io/badge/-Shell-4EAA25?logo=gnubash&logoColor=white) | Ambient on-device macOS context capture: screen + mic reduced to text locally, raw media discarded. |
+| [`Touch-Up-D`](https://github.com/MAKaminski/Touch-Up-D) | ![C](https://img.shields.io/badge/-C-A8B9CC?logo=c&logoColor=black) | Tap-to-click for touchscreen monitors on macOS via a root daemon that seizes the touch device. |
+| [`SysMemory`](https://github.com/MAKaminski/SysMemory) | ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) | VS Code extension that surfaces memory and CPU usage in both units and percentages. |
+| [`kaminski-portfolio`](https://github.com/MAKaminski/kaminski-portfolio) | ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) | Portfolio starter: React frontend, Python backend, Neon/Prisma/pgvector. |
 
-_Private/internal repositories can be listed in the same format when metadata is approved for public display. Aggregate private contribution signal is represented in the analytics section above._
+_Descriptions are pulled from the live GitHub repositories. This profile repo itself ([`MAKaminski/MAKaminski`](https://github.com/MAKaminski/MAKaminski)) now ships a small **Rust** service that powers the Cursor-usage badge above._
 
 </div>
+
+---
+
+## 🦀 Under the Hood — This Profile Is Self-Updating
+
+<div align="center">
+
+This README isn't static — a tiny **Rust** binary and a pair of GitHub Actions keep it fresh on a schedule.
+
+</div>
+
+```text
+        ┌──────────────────────────┐        hourly         ┌────────────────────────┐
+        │  cursor-usage  (Rust 🦀) │ ───────cron────────▶ │  data/cursor_usage.db  │
+        │  ureq · rusqlite · serde │                      │  + …_latest.json (badge)│
+        └──────────────────────────┘                      └────────────────────────┘
+
+        ┌──────────────────────────┐      every 10 min     ┌────────────────────────┐
+        │  refresh-stats (Actions) │ ───────cron────────▶ │  assets/stats/*.svg     │
+        │  curl + retry/backoff     │                      │  (Dracula-themed cards) │
+        └──────────────────────────┘                      └────────────────────────┘
+```
+
+| Component | Stack | Role |
+|---|---|---|
+| [`cursor-usage/`](cursor-usage/) | ![Rust](https://img.shields.io/badge/-Rust-CE412B?logo=rust&logoColor=white) `ureq` · `rusqlite` · `serde` · `chrono` | Snapshots Cursor team usage into SQLite and publishes the badge summary JSON. Unit-tested, degrades gracefully when the API is unavailable. |
+| [`.github/workflows/cursor-usage.yml`](.github/workflows/cursor-usage.yml) | ![GitHub Actions](https://img.shields.io/badge/-Actions-2088FF?logo=githubactions&logoColor=white) | Builds the Rust binary hourly and commits new snapshots. |
+| [`.github/workflows/refresh-stats.yml`](.github/workflows/refresh-stats.yml) | ![Shell](https://img.shields.io/badge/-Shell-4EAA25?logo=gnubash&logoColor=white) | Refreshes the GitHub stat cards every 10 minutes with retry/backoff. |
 
 ---
 

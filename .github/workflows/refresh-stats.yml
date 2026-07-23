@@ -63,14 +63,14 @@ jobs:
           successes=0
           failures=0
 
-          if fetch_svg "assets/stats/github-stats.svg" "https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=radical&include_all_commits=true&count_private=true&rank_icon=github"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/github-streak.svg" "https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=radical&border_radius=10"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/profile-details.svg" "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/productive-time.svg" "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/repos-per-language.svg" "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/top-langs.svg" "https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=radical&border_radius=10&langs_count=8"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/most-commit-language.svg" "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=radical"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
-          if fetch_svg "assets/stats/activity-graph.svg" "https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&theme=react-dark&hide_border=true"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/github-stats.svg" "https://github-readme-stats.vercel.app/api?username=MAKaminski&show_icons=true&theme=dracula&include_all_commits=true&count_private=true&rank_icon=github&border_radius=10&hide_border=true"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/github-streak.svg" "https://github-readme-streak-stats.herokuapp.com/?user=MAKaminski&theme=dracula&border_radius=10"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/profile-details.svg" "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MAKaminski&theme=dracula"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/productive-time.svg" "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=MAKaminski&theme=dracula"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/repos-per-language.svg" "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MAKaminski&theme=dracula"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/top-langs.svg" "https://github-readme-stats.vercel.app/api/top-langs/?username=MAKaminski&layout=compact&theme=dracula&border_radius=10&langs_count=8"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/most-commit-language.svg" "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MAKaminski&theme=dracula"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
+          if fetch_svg "assets/stats/activity-graph.svg" "https://github-readme-activity-graph.vercel.app/graph?username=MAKaminski&bg_color=282a36&color=bd93f9&line=bd93f9&point=ff79c6&area=true&hide_border=true"; then successes=$((successes + 1)); else failures=$((failures + 1)); fi
 
           echo "Stats refresh summary: success=${successes}, failed=${failures}"
           if [ "$successes" -eq 0 ]; then
@@ -83,7 +83,7 @@ jobs:
           set -euo pipefail
           tmp="$(mktemp)"
           if curl -fsSL --connect-timeout 25 --max-time 120 --retry 8 --retry-delay 5 --retry-max-time 300 \
-            "https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=radical&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage" \
+            "https://github-profile-trophy.vercel.app/?username=MAKaminski&theme=dracula&row=2&column=3&title=Followers,Stars,Commits,Repositories,PullRequest,MultiLanguage" \
             -o "$tmp" && grep -qi "<svg" "$tmp"; then
             mv "$tmp" assets/stats/trophies.svg
             echo "Updated trophies.svg"

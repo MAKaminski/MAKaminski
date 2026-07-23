@@ -4,7 +4,7 @@ This directory stores the data that powers the **Cursor Usage** badge in the roo
 
 ## What this subsystem does
 
-- Fetches Cursor team usage from Cursor APIs via `scripts/fetch_cursor_usage.py`
+- Fetches Cursor team usage from Cursor APIs via the Rust binary in `cursor-usage/`
 - Appends snapshot rows to SQLite (`data/cursor_usage.db`)
 - Publishes badge-friendly summary JSON (`data/cursor_usage_latest.json`)
 - Commits updated `data/` files from the hourly workflow (`.github/workflows/cursor-usage.yml`)
@@ -19,14 +19,14 @@ This directory stores the data that powers the **Cursor Usage** badge in the roo
 ## Workflow and architecture
 
 1. GitHub Actions runs **hourly** (`cron: "0 * * * *"`).
-2. Workflow sets `CURSOR_API_KEY` from repo secrets and runs:
-   - `python scripts/fetch_cursor_usage.py`
-3. Script initializes schema from `data/schema.sql` (if needed).
-4. Script fetches usage for the current UTC date (`startDate=today`, `endDate=today`) from:
+2. Workflow sets `CURSOR_API_KEY` from repo secrets, builds the Rust binary, and runs:
+   - `./cursor-usage/target/release/cursor-usage`
+3. Binary initializes schema from `data/schema.sql` (embedded fallback if missing).
+4. Binary fetches usage for the current UTC date (`startDate=today`, `endDate=today`) from:
    - `/analytics/team/agent-edits` -> `metric_type='agent_edits'`
    - `/analytics/team/tabs` -> `metric_type='tabs'`
    - `/analytics/ai-code/commits` -> `metric_type='ai_commits'`, with `project` from `repoName`/`repository`
-5. Script writes summary JSON and exits 0 (including handled error states).
+5. Binary writes summary JSON and exits 0 (including handled error states).
 6. Workflow commits any `data/` changes with:
    - `chore: update Cursor usage snapshot [automated]`
 
@@ -34,18 +34,20 @@ This directory stores the data that powers the **Cursor Usage** badge in the roo
 
 ### `cursor_usage_latest.json`
 
-Current keys written by the script:
+Current keys written by the binary:
 
 - `display_value` (string) - value shown by badge
 - `recorded_at` (ISO hour bucket, when available)
 - `snapshots_today` (integer)
 - `last_7d` (object: metric_type -> count)
 - `by_project` (object: project -> count)
+- `detail` (string, error states only) - full reason behind a short badge value
 
 Error/fallback values:
 
 - Missing secret: `display_value = "CURSOR_API_KEY not set"`
-- 401/403 API access failure: `display_value = "NEED TO UPGRADE TO ENTERPRISE PLAN TO RETURN VALUE"`
+- 401/403 API access failure: `display_value = "enterprise only"` (full reason in `detail`)
+- Other fetch failure: `display_value = "unavailable"` (full reason in `detail`)
 
 ### `usage_snapshots` table (`schema.sql`)
 
@@ -69,16 +71,25 @@ Indexes:
 ### One-off run
 
 ```bash
-CURSOR_API_KEY="<admin-api-key>" python scripts/fetch_cursor_usage.py
+# from repo root (writes to ./data); needs a Rust toolchain (cargo)
+CURSOR_API_KEY="<admin-api-key>" cargo run --release --manifest-path cursor-usage/Cargo.toml
+```
+
+### Run the tests
+
+```bash
+cargo test --manifest-path cursor-usage/Cargo.toml
 ```
 
 ### Verify outputs
 
 ```bash
-python scripts/fetch_cursor_usage.py
+cargo run --release --manifest-path cursor-usage/Cargo.toml
 sqlite3 data/cursor_usage.db "SELECT metric_type, COUNT(*) FROM usage_snapshots GROUP BY metric_type;"
 sqlite3 data/cursor_usage.db "SELECT project, COUNT(*) FROM usage_snapshots WHERE project IS NOT NULL GROUP BY project ORDER BY 2 DESC LIMIT 10;"
 ```
+
+> Tip: set `CURSOR_USAGE_DATA_DIR=/tmp/scratch` to write the DB/JSON somewhere other than `data/` during local testing.
 
 ## Constraints and interpretation notes
 
@@ -94,11 +105,16 @@ sqlite3 data/cursor_usage.db "SELECT project, COUNT(*) FROM usage_snapshots WHER
 - Confirm repo secret `CURSOR_API_KEY` exists and is non-empty.
 - Re-run workflow manually (`workflow_dispatch`) after updating secret.
 
-### Badge shows enterprise upgrade message
+### Badge shows `enterprise only`
 
-- The script maps API 401/403 to:
-  - `NEED TO UPGRADE TO ENTERPRISE PLAN TO RETURN VALUE`
+- The binary maps API 401/403 to the short badge value `enterprise only`.
+- The full reason (`NEED TO UPGRADE TO ENTERPRISE PLAN TO RETURN VALUE`) is preserved in the JSON `detail` field.
 - Verify account/API entitlement for Cursor Analytics + AI Code Tracking endpoints.
+
+### Badge shows `unavailable`
+
+- A non-auth fetch failure occurred (network, 5xx, or malformed payload).
+- The specific error is preserved in the JSON `detail` field.
 
 ### `by_project` is empty
 

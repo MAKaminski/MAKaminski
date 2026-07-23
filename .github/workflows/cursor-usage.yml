@@ -1,8 +1,9 @@
-# Fetches Cursor usage from Analytics API (Enterprise) and appends to SQLite.
+# Fetches Cursor usage from the Analytics API (Enterprise) and appends to SQLite.
 # Runs hourly. Requires CURSOR_API_KEY secret (Admin API key from cursor.com/dashboard).
 #
-# Data: data/cursor_usage.db (SQLite), data/cursor_usage_latest.json (summary for badges)
-# Schema supports project allocation and graphing.
+# Implemented in Rust (cursor-usage/). Data: data/cursor_usage.db (SQLite),
+# data/cursor_usage_latest.json (summary for badges). Schema supports project
+# allocation and graphing.
 
 name: Cursor Usage Tracker
 
@@ -21,15 +22,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo build
+        uses: Swatinem/rust-cache@v2
         with:
-          python-version: "3.11"
+          workspaces: cursor-usage
+
+      - name: Build cursor-usage (release)
+        run: cargo build --release --manifest-path cursor-usage/Cargo.toml
 
       - name: Fetch Cursor usage and update DB
         env:
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
-        run: python scripts/fetch_cursor_usage.py
+        run: ./cursor-usage/target/release/cursor-usage
         continue-on-error: true
 
       - name: Commit and push if changed
