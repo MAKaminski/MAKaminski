@@ -397,30 +397,104 @@ me.say_hi()
 
 ## 🛠️ Tech Arsenal
 
+**Fractional CTO / CFO · fintech & payments · AI agents · trading & analytics — Atlanta, GA.**
+This is the working toolset behind production software and finance operations: I design, build, and ship
+full-stack fintech products, wire up AI/LLM agents, and run the data and business systems around them.
+Every badge links to the official docs; each group lists plain-text keywords for search & AI discovery.
+
+**⚡ Core stack:**
+[![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://docs.python.org/3/)
+[![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
+[![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/docs)
+[![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/docs/)
+[![Supabase](https://img.shields.io/badge/-Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/docs)
+[![AWS](https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://docs.aws.amazon.com/)
+[![Claude](https://img.shields.io/badge/-Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://docs.anthropic.com/)
+[![Plaid](https://img.shields.io/badge/-Plaid-000000?style=for-the-badge&logo=plaid&logoColor=white)](https://plaid.com/docs/)
+[![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)](https://docs.snowflake.com/)
+
 <details open>
+<summary><b>🧠 AI, Agents & LLMs</b></summary>
+<br>
+
+[![Claude](https://img.shields.io/badge/-Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://docs.anthropic.com/)
+[![Claude Code](https://img.shields.io/badge/-Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://docs.anthropic.com/en/docs/claude-code)
+[![Cursor](https://img.shields.io/badge/-Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.com/)
+[![OpenAI](https://img.shields.io/badge/-OpenAI%20GPT-412991?style=for-the-badge&logo=openai&logoColor=white)](https://platform.openai.com/docs/)
+[![MCP](https://img.shields.io/badge/-Model%20Context%20Protocol-3B82F6?style=for-the-badge)](https://modelcontextprotocol.io/)
+[![LangChain](https://img.shields.io/badge/-LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://python.langchain.com/)
+[![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/docs)
+[![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/docs/stable/index.html)
+[![Pinecone](https://img.shields.io/badge/-Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)](https://docs.pinecone.io/)
+
+**🔧 Applied:**
+[![AI Agents](https://img.shields.io/badge/-AI%20Agents-3B82F6?style=flat-square)](https://modelcontextprotocol.io/)
+[![MCP Servers](https://img.shields.io/badge/-MCP%20Servers-3B82F6?style=flat-square)](https://modelcontextprotocol.io/)
+[![RAG](https://img.shields.io/badge/-RAG-2563EB?style=flat-square)](https://huggingface.co/docs/transformers/en/model_doc/rag)
+[![Prompt Engineering](https://img.shields.io/badge/-Prompt%20Engineering-2563EB?style=flat-square)](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
+[![LLM Evals](https://img.shields.io/badge/-LLM%20Evals-2563EB?style=flat-square)](https://huggingface.co/docs)
+[![Vector Search](https://img.shields.io/badge/-Vector%20Search-2563EB?style=flat-square)](https://docs.pinecone.io/)
+
+> **Keywords:** Anthropic Claude · Claude Code · Cursor · OpenAI GPT · Model Context Protocol (MCP) · MCP server development · AI agents · agentic workflows · LangChain · Hugging Face · PyTorch · RAG · retrieval-augmented generation · vector search · Pinecone · prompt engineering · LLM evaluation · applied AI.
+
+</details>
+
+<details open>
+<summary><b>💳 Fintech, Finance & Data Platforms</b></summary>
+<br>
+
+[![Plaid](https://img.shields.io/badge/-Plaid-000000?style=for-the-badge&logo=plaid&logoColor=white)](https://plaid.com/docs/)
+[![Stripe](https://img.shields.io/badge/-Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://stripe.com/docs)
+[![QuickBooks](https://img.shields.io/badge/-QuickBooks-2CA01C?style=for-the-badge&logo=quickbooks&logoColor=white)](https://developer.intuit.com/)
+[![Oracle NetSuite](https://img.shields.io/badge/-Oracle%20NetSuite-1A1A1A?style=for-the-badge&logo=oracle&logoColor=F80000)](https://www.netsuite.com/)
+[![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)](https://docs.snowflake.com/)
+[![dbt](https://img.shields.io/badge/-dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://docs.getdbt.com/)
+[![Polygon.io](https://img.shields.io/badge/-Polygon.io-5F5CFF?style=for-the-badge)](https://polygon.io/docs)
+[![Interactive Brokers](https://img.shields.io/badge/-Interactive%20Brokers-D81222?style=for-the-badge)](https://www.interactivebrokers.com/en/trading/ib-api.php)
+
+> **Keywords:** fintech · payments · credit & lending platforms · embedded finance · Plaid · Stripe · Intuit QuickBooks · Oracle NetSuite ERP · Snowflake data warehouse · dbt · financial analytics · FP&A · PE-grade financial modeling · M&A / advisory · trading systems · Polygon.io market data · Interactive Brokers API · algorithmic & options trading.
+
+</details>
+
+<details>
+<summary><b>🧩 Product, Design & Ops</b></summary>
+<br>
+
+[![Linear](https://img.shields.io/badge/-Linear-5E6AD2?style=for-the-badge&logo=linear&logoColor=white)](https://linear.app/docs)
+[![Notion](https://img.shields.io/badge/-Notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://www.notion.so/)
+[![Jira](https://img.shields.io/badge/-Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)](https://www.atlassian.com/software/jira)
+[![Confluence](https://img.shields.io/badge/-Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white)](https://www.atlassian.com/software/confluence)
+[![Figma](https://img.shields.io/badge/-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/)
+[![Airtable](https://img.shields.io/badge/-Airtable-18BFFF?style=for-the-badge&logo=airtable&logoColor=white)](https://airtable.com/)
+[![PostHog](https://img.shields.io/badge/-PostHog-1D4AFF?style=for-the-badge&logo=posthog&logoColor=white)](https://posthog.com/docs)
+[![Shopify](https://img.shields.io/badge/-Shopify-7AB55C?style=for-the-badge&logo=shopify&logoColor=white)](https://www.shopify.com/)
+[![Ahrefs](https://img.shields.io/badge/-Ahrefs-FF6924?style=for-the-badge)](https://ahrefs.com/)
+[![Canva](https://img.shields.io/badge/-Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)](https://www.canva.com/)
+[![Resend](https://img.shields.io/badge/-Resend-000000?style=for-the-badge&logo=resend&logoColor=white)](https://resend.com/)
+[![Google Workspace](https://img.shields.io/badge/-Google%20Workspace-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://workspace.google.com/)
+
+> **Keywords:** product management · roadmapping · Linear · Notion · Jira · Confluence · Figma · Airtable · Monday.com · Lucidchart · PostHog product analytics · Shopify e-commerce · Ahrefs SEO · Canva · Gamma · Resend · Bitly · Google Workspace · operations & GTM tooling.
+
+</details>
+
+<details>
 <summary><b>🎨 Frontend Development</b></summary>
 <br>
 
 [![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Next.js](https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/docs)
 [![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
-[![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
+[![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/docs)
 [![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
 [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
 [![WordPress](https://img.shields.io/badge/-WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)](https://developer.wordpress.org/)
 
-</details>
-
-<details>
-<summary><b>📱 Mobile Development</b></summary>
-<br>
-
-[![iOS](https://img.shields.io/badge/-iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://developer.apple.com/ios/)
-[![Swift](https://img.shields.io/badge/-Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.org/documentation/)
-[![Objective-C](https://img.shields.io/badge/-Objective--C-1572B6?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/documentation/objectivec)
-[![tvOS](https://img.shields.io/badge/-tvOS-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/tvos/)
-[![Android](https://img.shields.io/badge/-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/docs)
+> **Keywords:** React · Next.js · Vue.js · TypeScript · JavaScript · Tailwind CSS · Redux · HTML5 · CSS3 · WordPress · responsive UI · design systems.
 
 </details>
 
@@ -434,59 +508,70 @@ me.say_hi()
 [![Django](https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white)](https://docs.djangoproject.com/)
 [![Ruby on Rails](https://img.shields.io/badge/-Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white)](https://guides.rubyonrails.org/)
 [![Go](https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](https://go.dev/doc/)
+[![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)](https://graphql.org/learn/)
 [![Hapi](https://img.shields.io/badge/-Hapi-F58220?style=for-the-badge&logo=hapi&logoColor=white)](https://hapi.dev/)
 [![VBA](https://img.shields.io/badge/-VBA-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)](https://learn.microsoft.com/en-us/office/vba/api/overview/)
+
+> **Keywords:** Python · Node.js · FastAPI · Django · Ruby on Rails · Go · GraphQL · REST APIs · microservices · Hapi · VBA · backend architecture.
 
 </details>
 
 <details>
-<summary><b>🤖 Machine Learning & AI</b></summary>
+<summary><b>📱 Mobile Development</b></summary>
+<br>
+
+[![iOS](https://img.shields.io/badge/-iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://developer.apple.com/ios/)
+[![Swift](https://img.shields.io/badge/-Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)](https://www.swift.org/documentation/)
+[![Objective-C](https://img.shields.io/badge/-Objective--C-1572B6?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/documentation/objectivec)
+[![tvOS](https://img.shields.io/badge/-tvOS-000000?style=for-the-badge&logo=apple&logoColor=white)](https://developer.apple.com/tvos/)
+[![Android](https://img.shields.io/badge/-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/docs)
+
+> **Keywords:** iOS · Swift · Objective-C · tvOS · Android · mobile app development.
+
+</details>
+
+<details>
+<summary><b>🤖 Machine Learning & Data Science</b></summary>
 <br>
 
 [![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/learn)
 [![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/docs/stable/index.html)
 [![Scikit-learn](https://img.shields.io/badge/-Scikit%20Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/stable/documentation.html)
-[![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-FF9A00?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/docs)
 [![MLflow](https://img.shields.io/badge/-MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)](https://mlflow.org/docs/latest/index.html)
 [![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://docs.jupyter.org/en/latest/)
-
-**🧠 Specialized Skills:**
-[![Self-Supervised Learning](https://img.shields.io/badge/-Self--Supervised%20Learning-FF6F00?style=flat-square)](https://en.wikipedia.org/wiki/Self-supervised_learning)
-[![Transfer Learning](https://img.shields.io/badge/-Transfer%20Learning-00C853?style=flat-square)](https://en.wikipedia.org/wiki/Transfer_learning)
-[![Reinforcement Learning](https://img.shields.io/badge/-Reinforcement%20Learning-673AB7?style=flat-square)](https://en.wikipedia.org/wiki/Reinforcement_learning)
-[![Transformers](https://img.shields.io/badge/-Transformers-FF6F00?style=flat-square)](https://huggingface.co/docs/transformers/index)
-[![LLMs](https://img.shields.io/badge/-LLMs-00897B?style=flat-square)](https://huggingface.co/docs/transformers/en/llm_tutorial)
-[![Text Embeddings](https://img.shields.io/badge/-Text%20Embeddings-3949AB?style=flat-square)](https://platform.openai.com/docs/guides/embeddings)
-[![GPT](https://img.shields.io/badge/-GPT-4285F4?style=flat-square)](https://platform.openai.com/docs/models)
-[![FFT](https://img.shields.io/badge/-FFT-9C27B0?style=flat-square)](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
-[![Digital Signal Processing](https://img.shields.io/badge/-DSP-FF5722?style=flat-square)](https://en.wikipedia.org/wiki/Digital_signal_processing)
-
-</details>
-
-<details>
-<summary><b>📊 Data Science & Analytics</b></summary>
-<br>
-
 [![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/docs/)
 [![NumPy](https://img.shields.io/badge/-NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/doc/)
-[![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)](https://docs.scipy.org/doc/scipy/)
-[![Matplotlib](https://img.shields.io/badge/-Matplotlib-2C2D72?style=for-the-badge&logo=matplotlib&logoColor=white)](https://matplotlib.org/stable/users/index.html)
 [![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com/python/)
 [![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://docs.streamlit.io/)
 [![D3.js](https://img.shields.io/badge/-D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)](https://d3js.org/getting-started)
 
+**🧠 Specialized:**
+[![LLMs](https://img.shields.io/badge/-LLMs-00897B?style=flat-square)](https://huggingface.co/docs/transformers/en/llm_tutorial)
+[![Transformers](https://img.shields.io/badge/-Transformers-FF6F00?style=flat-square)](https://huggingface.co/docs/transformers/index)
+[![Text Embeddings](https://img.shields.io/badge/-Text%20Embeddings-3949AB?style=flat-square)](https://platform.openai.com/docs/guides/embeddings)
+[![Reinforcement Learning](https://img.shields.io/badge/-Reinforcement%20Learning-673AB7?style=flat-square)](https://en.wikipedia.org/wiki/Reinforcement_learning)
+[![FFT / DSP](https://img.shields.io/badge/-FFT%20%2F%20DSP-9C27B0?style=flat-square)](https://en.wikipedia.org/wiki/Digital_signal_processing)
+
+> **Keywords:** TensorFlow · PyTorch · scikit-learn · MLflow · Jupyter · Pandas · NumPy · SciPy · Matplotlib · Plotly · Streamlit · D3.js · time-series forecasting · feature engineering · transformers · embeddings · reinforcement learning · signal processing.
+
 </details>
 
 <details>
-<summary><b>☁️ Cloud & DevOps</b></summary>
+<summary><b>☁️ Cloud, DevOps & Platforms</b></summary>
 <br>
 
 [![AWS](https://img.shields.io/badge/-AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://docs.aws.amazon.com/)
 [![GCP](https://img.shields.io/badge/-GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/docs)
 [![Azure](https://img.shields.io/badge/-Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://learn.microsoft.com/en-us/azure/)
+[![Vercel](https://img.shields.io/badge/-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/docs)
+[![Supabase](https://img.shields.io/badge/-Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/docs)
+[![Railway](https://img.shields.io/badge/-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://docs.railway.app/)
 [![Docker](https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://docs.docker.com/)
 [![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/docs/home/)
+[![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://docs.github.com/actions)
 [![Apache Airflow](https://img.shields.io/badge/-Apache%20Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)](https://airflow.apache.org/docs/)
+
+> **Keywords:** AWS · GCP · Azure · Vercel · Supabase · Railway · Docker · Kubernetes · GitHub Actions · CI/CD · Apache Airflow · serverless · infrastructure-as-code · DevOps.
 
 </details>
 
@@ -496,18 +581,19 @@ me.say_hi()
 
 **Relational:**
 [![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/docs/)
+[![Supabase](https://img.shields.io/badge/-Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/docs)
 [![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://dev.mysql.com/doc/)
 [![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/docs.html)
-[![Snowflake](https://img.shields.io/badge/-Snowflake-56B4E9?style=for-the-badge&logo=snowflake&logoColor=white)](https://docs.snowflake.com/)
+[![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white)](https://docs.snowflake.com/)
 
 **NoSQL & Vector:**
 [![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/docs/)
 [![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/docs/latest/)
+[![Pinecone](https://img.shields.io/badge/-Pinecone-000000?style=for-the-badge&logo=pinecone&logoColor=white)](https://docs.pinecone.io/)
 [![Elasticsearch](https://img.shields.io/badge/-Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)](https://www.elastic.co/guide/index.html)
-[![Pinecone](https://img.shields.io/badge/-Pinecone-3399FF?style=for-the-badge&logo=pinecone&logoColor=white)](https://docs.pinecone.io/)
 [![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/docs)
-[![Parse](https://img.shields.io/badge/-Parse-249EDA?style=for-the-badge&logo=parse&logoColor=white)](https://docs.parseplatform.org/)
-[![Realm](https://img.shields.io/badge/-Realm-39477F?style=for-the-badge&logo=realm&logoColor=white)](https://www.mongodb.com/docs/realm/)
+
+> **Keywords:** PostgreSQL · Supabase · MySQL · SQLite · Snowflake · MongoDB · Redis · Pinecone vector DB · Elasticsearch · Firebase · SQL · data modeling · query optimization.
 
 </details>
 
@@ -540,10 +626,14 @@ _Private/internal repositories can be listed in the same format when metadata is
 
 | Domain | Focus Areas |
 |---|---|
-| Leadership & Strategy | Technology roadmap, product prioritization, execution management |
-| Product & Engineering | Full-stack delivery, system design, platform operations |
-| Data & Automation | Analytics pipelines, reporting workflows, applied AI |
-| Fintech & Business Systems | Trading tooling, investment analysis, decision-support systems |
+| Executive Leadership | Fractional CTO / CFO, technology & product strategy, roadmapping, org & execution management, board-level reporting |
+| Product & Engineering | Full-stack delivery (React/Next.js + Python/FastAPI), system design, API & platform architecture, MCP/AI-agent integration |
+| Fintech & Payments | Payments & credit/lending platforms, embedded finance, Plaid/Stripe integration, KYC & compliance-aware systems |
+| Finance & Strategy | PE-grade financial modeling, FP&A, M&A / advisory, ERP (NetSuite) & controls, unit economics, fundraising support |
+| Data & AI | Snowflake/dbt analytics pipelines, applied AI & LLMs, RAG & vector search, forecasting, decision-support systems |
+| Trading & Quant | Algorithmic & options strategies, market-data pipelines (Polygon.io), Interactive Brokers automation, backtesting |
+
+> **Hire me for:** `Fractional CTO` · `Fractional CFO` · `Fintech Engineering Leader` · `Head of Product / Payments` · `Technical Co-founder` — Atlanta, GA · remote-friendly · open to fractional & full-time.
 
 ---
 
