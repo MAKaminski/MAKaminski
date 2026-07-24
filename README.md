@@ -1,15 +1,15 @@
-# 👋 Hi there! I'm MAKaminski
+# Michael Kaminski — Fintech · Finance · Engineering
 
 <div align="center">
   
-  ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=9400D3&center=true&vCenter=true&width=700&lines=Technology+Executive;Product+%26+Engineering+Leader;Fintech+%26+Analytics;Automation+Builder;Strategy+to+Execution)
+  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=28&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=760&lines=Fintech+%C2%B7+Finance+%C2%B7+Engineering;Fluent+in+PE-grade+finance+%26+hands-on+engineering;Fractional+CFO+%2F+CTO;Strategy+to+Execution;Atlanta-based)
   
-  ### 🚀 Transforming data into insights, code into solutions
+  ### Fluent in both PE-grade finance and hands-on software engineering.
   
-  ![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=blueviolet&style=for-the-badge)
-  ![GitHub User's stars](https://img.shields.io/github/stars/MAKaminski?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=gold)
-  ![GitHub followers](https://img.shields.io/github/followers/MAKaminski?label=Follow&style=for-the-badge&color=blue)
-  [![Website](https://img.shields.io/badge/-Visit_My_Website-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://michael-kaminski.io)
+  ![Profile Views](https://komarev.com/ghpvc/?username=MAKaminski&color=3B82F6&style=for-the-badge)
+  ![GitHub User's stars](https://img.shields.io/github/stars/MAKaminski?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&color=2563EB)
+  ![GitHub followers](https://img.shields.io/github/followers/MAKaminski?label=Follow&style=for-the-badge&color=3B82F6)
+  [![Website](https://img.shields.io/badge/-Visit_michael--kaminski.io-FFF500?style=for-the-badge&logo=googlechrome&logoColor=060606)](https://michael-kaminski.io)
   
 </div>
 
@@ -19,7 +19,7 @@
 
 <div align="center">
 
-[![Cursor Usage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FMAKaminski%2FMAKaminski%2Fmain%2Fdata%2Fcursor_usage_latest.json&query=%24.display_value&label=Cursor%20Usage&style=for-the-badge&color=9400D3)](#cursor-usage)
+[![Cursor Usage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FMAKaminski%2FMAKaminski%2Fmain%2Fdata%2Fcursor_usage_latest.json&query=%24.display_value&label=Cursor%20Usage&style=for-the-badge&color=3B82F6)](#cursor-usage)
 
 _Stored in `data/cursor_usage.db` (SQLite). Hourly refresh via [workflow](.github/workflows/cursor-usage.yml). Project allocation in `by_project`. Requires `CURSOR_API_KEY` (Enterprise)._
 
@@ -35,12 +35,12 @@ _Operational details and troubleshooting: [`data/README.md`](data/README.md)._
 
 <div align="center">
 
-[![Total Page Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_total&query=%24.value&label=Total%20Page%20Views&style=for-the-badge&color=6f42c1)](#calc-profile-conversion)
-[![Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Freal_human_page_views&query=%24.value&label=Real%20Human%20Views&style=for-the-badge&color=0e8a16)](#calc-profile-conversion)
-[![AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_ai&query=%24.value&label=AI%20Views&style=for-the-badge&color=d73a49)](#calc-profile-conversion)
-[![Human Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb)](#calc-profile-conversion)
-[![AI Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500)](#calc-profile-conversion)
-[![Feature Uses Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df)](#calc-profile-conversion)
+[![Total Page Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_total&query=%24.value&label=Total%20Page%20Views&style=for-the-badge&color=2563EB)](#calc-profile-conversion)
+[![Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Freal_human_page_views&query=%24.value&label=Real%20Human%20Views&style=for-the-badge&color=3B82F6)](#calc-profile-conversion)
+[![AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fpage_views_ai&query=%24.value&label=AI%20Views&style=for-the-badge&color=64748B)](#calc-profile-conversion)
+[![Human Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=3B82F6)](#calc-profile-conversion)
+[![AI Clicks](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=64748B)](#calc-profile-conversion)
+[![Feature Uses Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=FFF500)](#calc-profile-conversion)
 
 _Conversion rates are calculated live in the interactive feature (overall, human, and AI)._
 
@@ -52,16 +52,16 @@ _Conversion rates are calculated live in the interactive feature (overall, human
 
 <div align="center">
 
-[![Portfolio Views Total](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1)](#calc-portfolio-conversion)
-[![Portfolio Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16)](#calc-portfolio-conversion)
-[![Portfolio AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_ai&query=%24.value&label=Portfolio%20AI%20Views&style=for-the-badge&color=d73a49)](#calc-portfolio-conversion)
-[![Portfolio Clicks Human](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_human&query=%24.value&label=Portfolio%20Clicks%20(Human)&style=for-the-badge&color=1f6feb)](#calc-portfolio-conversion)
-[![Portfolio Clicks AI](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_ai&query=%24.value&label=Portfolio%20Clicks%20(AI)&style=for-the-badge&color=fb8500)](#calc-portfolio-conversion)
-[![Portfolio Clicks Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df)](#calc-portfolio-conversion)
+[![Portfolio Views Total](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=2563EB)](#calc-portfolio-conversion)
+[![Portfolio Real Human Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=3B82F6)](#calc-portfolio-conversion)
+[![Portfolio AI Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_ai&query=%24.value&label=Portfolio%20AI%20Views&style=for-the-badge&color=64748B)](#calc-portfolio-conversion)
+[![Portfolio Clicks Human](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_human&query=%24.value&label=Portfolio%20Clicks%20(Human)&style=for-the-badge&color=3B82F6)](#calc-portfolio-conversion)
+[![Portfolio Clicks AI](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_ai&query=%24.value&label=Portfolio%20Clicks%20(AI)&style=for-the-badge&color=64748B)](#calc-portfolio-conversion)
+[![Portfolio Clicks Both](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=FFF500)](#calc-portfolio-conversion)
 
-[![lace-luxx.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_lace_luxx_com_views_total&query=%24.value&label=lace--luxx.com%20Views&style=flat-square&color=7c3aed)](#calc-site-conversion)
+[![lace-luxx.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_lace_luxx_com_views_total&query=%24.value&label=lace--luxx.com%20Views&style=flat-square&color=60A5FA)](#calc-site-conversion)
 [![modular-equity.com Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_modular_equity_com_views_total&query=%24.value&label=modular--equity.com%20Views&style=flat-square&color=2563eb)](#calc-site-conversion)
-[![michael-kaminski.io Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_michael_kaminski_io_views_total&query=%24.value&label=michael--kaminski.io%20Views&style=flat-square&color=0f766e)](#calc-site-conversion)
+[![michael-kaminski.io Views](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fsite_michael_kaminski_io_views_total&query=%24.value&label=michael--kaminski.io%20Views&style=flat-square&color=3B82F6)](#calc-site-conversion)
 
 _Per-site and portfolio conversion rates are calculated in the Website View Intelligence feature._
 
@@ -222,30 +222,46 @@ site_michael_kaminski_io_clicks_both
 ```python
 class Profile:
     def __init__(self):
-        self.name = "MAKaminski"
-        self.role = "Technology Executive & Product/Engineering Leader"
-        self.passions = ["Fintech", "Product Strategy", "Data & Analytics", "Automation"]
-        self.current_focus = "Building data-driven products and automation systems"
-        self.favorite_ide = "VS Code + AI tooling"
+        self.name = "Michael Kaminski"
+        self.role = "Fintech leader — fluent in PE-grade finance and hands-on engineering"
+        self.superpower = "Translating between the balance sheet and the codebase"
+        self.works_as = ["Fractional CFO", "Fractional CTO", "Product & Payments Leader"]
+        self.open_to = "Fractional & full-time"
         self.background = {
             "location": "Atlanta, GA",
-            "leadership": ["Technology Strategy", "Product & Engineering Execution", "Finance + Analytics"],
-            "focus_areas": ["Fintech", "Automation", "Data Platforms", "Applied AI"]
+            "finance": ["PE-grade analysis", "Strategic finance", "M&A / advisory", "ERP & controls"],
+            "engineering": ["Full-stack delivery", "Fintech & payments platforms", "Data & applied AI"],
         }
-        
+
     def say_hi(self):
-        print("Thanks for dropping by! Let's build something amazing together! 🚀")
-        print(f"Coding with {self.favorite_ide} ✨")
+        print("Two languages, one operator: finance and engineering.")
+        print("Strategy to execution — let's build something that ships.")
 
 me = Profile()
 me.say_hi()
 ```
 
-🔭 **Currently working on:** Fintech, analytics, and automation projects  
-🌱 **Learning:** Applied AI patterns for business and product systems  
-💡 **Ask me about:** Product strategy, engineering execution, data platforms, and automation  
-⚡ **Fun fact:** I can speak fluent SQL to databases and Python to computers  
-🎵 **Music:** [Open Spotify profile](https://open.spotify.com/user/makaminski1)
+💼 **What I do:** Fractional CFO / CTO and product leadership for fintech & payments teams
+🔭 **Currently building:** Data-driven fintech, trading, and automation systems
+🧠 **Fluent in both:** PE-grade finance *and* hands-on software engineering
+💡 **Ask me about:** Fintech strategy, payments, product & engineering execution, applied AI
+📍 **Based in:** Atlanta, GA — open to fractional & full-time
+🔗 **More:** [michael-kaminski.io](https://michael-kaminski.io)
+
+---
+
+## ⭐ Highlights
+
+<div align="center">
+
+| | |
+|---|---|
+| 🏦 **Finance** | PE-grade analysis, strategic finance, M&A / advisory, ERP & controls |
+| 🛠️ **Engineering** | Full-stack delivery, fintech & payments platforms, data & applied AI |
+| 🧭 **Leadership** | Product & payments strategy, execution management, 20+ yrs across finance & engineering |
+| 🤝 **Availability** | Fractional CFO / CTO — open to fractional & full-time |
+
+</div>
 
 ---
 
@@ -304,9 +320,9 @@ me.say_hi()
       </td>
       <td align="left" width="45%">
         <h4>Tracker Beside Feature</h4>
-        <a href="#calc-profile-conversion"><img alt="Feature uses both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=8250df" /></a><br>
-        <a href="#calc-profile-conversion"><img alt="Human clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=1f6feb" /></a><br>
-        <a href="#calc-profile-conversion"><img alt="AI clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=fb8500" /></a>
+        <a href="#calc-profile-conversion"><img alt="Feature uses both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_both&query=%24.value&label=Feature%20Uses%20(Both)&style=for-the-badge&color=FFF500" /></a><br>
+        <a href="#calc-profile-conversion"><img alt="Human clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_human&query=%24.value&label=Human%20Clicks&style=for-the-badge&color=3B82F6" /></a><br>
+        <a href="#calc-profile-conversion"><img alt="AI clicks" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_profile_interactions_v2%2Fclicks_ai&query=%24.value&label=AI%20Clicks&style=for-the-badge&color=64748B" /></a>
       </td>
     </tr>
   </table>
@@ -332,9 +348,9 @@ me.say_hi()
       </td>
       <td align="left" width="45%">
         <h4>Tracker Beside Feature</h4>
-        <a href="#calc-portfolio-conversion"><img alt="Portfolio views total" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=6f42c1" /></a><br>
-        <a href="#calc-portfolio-conversion"><img alt="Portfolio clicks both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=8250df" /></a><br>
-        <a href="#calc-portfolio-conversion"><img alt="Portfolio real human views" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=0e8a16" /></a>
+        <a href="#calc-portfolio-conversion"><img alt="Portfolio views total" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_views_total&query=%24.value&label=Portfolio%20Views%20(Total)&style=for-the-badge&color=2563EB" /></a><br>
+        <a href="#calc-portfolio-conversion"><img alt="Portfolio clicks both" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_clicks_both&query=%24.value&label=Portfolio%20Clicks%20(Both)&style=for-the-badge&color=FFF500" /></a><br>
+        <a href="#calc-portfolio-conversion"><img alt="Portfolio real human views" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fabacus.jasoncameron.dev%2Fget%2Fmakaminski_site_views_v1%2Fportfolio_real_human_views&query=%24.value&label=Portfolio%20Real%20Human%20Views&style=for-the-badge&color=3B82F6" /></a>
       </td>
     </tr>
   </table>
@@ -557,11 +573,11 @@ _Project and impact highlights are summarized above under Featured Projects & Po
 
 <div align="center">
   
-  **Ready to collaborate on something amazing?**
+  **Fractional CFO / CTO · product & payments leadership — open to fractional & full-time.**
   
-  [![Email](https://img.shields.io/badge/-MKaminski1337@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:MKaminski1337@gmail.com)
-  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/michaelxaxkaminski)
-  [![Website](https://img.shields.io/badge/-Portfolio-FF5722?style=for-the-badge&logo=googlechrome&logoColor=white)](https://michael-kaminski.io)
+  [![Email](https://img.shields.io/badge/-MKaminski1337@gmail.com-3B82F6?style=for-the-badge&logo=gmail&logoColor=white)](mailto:MKaminski1337@gmail.com)
+  [![LinkedIn](https://img.shields.io/badge/-LinkedIn-2563EB?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/michaelxaxkaminski)
+  [![Website](https://img.shields.io/badge/-michael--kaminski.io-FFF500?style=for-the-badge&logo=googlechrome&logoColor=060606)](https://michael-kaminski.io)
   
   ### 📊 Real-time Activity
   
@@ -569,8 +585,8 @@ _Project and impact highlights are summarized above under Featured Projects & Po
   
   ---
   
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer&text=Thanks%20for%20visiting!&fontSize=16&fontAlignY=65&desc=Let's%20build%20the%20future%20together&descAlignY=82&descAlign=center"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:060606,50:3B82F6,100:FFF500&height=100&section=footer&text=Fintech%20%C2%B7%20Finance%20%C2%B7%20Engineering&fontColor=ffffff&fontSize=16&fontAlignY=65&desc=Strategy%20to%20execution&descAlignY=82&descAlign=center"/>
   
-  ### 🌟 "The best way to predict the future is to create it."
+  ### 🌟 "Fluent in both the balance sheet and the codebase."
   
 </div>
