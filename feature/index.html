@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interaction Conversion Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         color-scheme: dark;
-        --bg: #070a12;
-        --card: #131a2a;
-        --card-alt: #1b2336;
-        --text: #e8ecf8;
-        --muted: #a8b1c9;
-        --accent: #8d5bff;
-        --accent-2: #2dd4bf;
-        --border: #2c3753;
+        --bg: #060606;
+        --card: #0d0d10;
+        --card-alt: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #3b82f6;
+        --accent-2: #fff500;
+        --border: #1f2937;
       }
       body {
         margin: 0;
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-        background: radial-gradient(circle at top, #121a2f 0%, var(--bg) 55%);
+        font-family: "Space Grotesk", Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: radial-gradient(circle at top, #0b0f1a 0%, var(--bg) 55%);
         color: var(--text);
       }
       .wrap {
@@ -61,7 +67,7 @@
         }
       }
       .kpi {
-        background: #0f1525;
+        background: #111827;
         border: 1px solid var(--border);
         border-radius: 10px;
         padding: 10px;
@@ -80,7 +86,7 @@
         border: 0;
         border-radius: 10px;
         padding: 12px 16px;
-        background: linear-gradient(90deg, var(--accent), #6f8cff);
+        background: linear-gradient(90deg, var(--accent), #60a5fa);
         color: white;
         font-weight: 700;
         cursor: pointer;
@@ -90,7 +96,7 @@
         cursor: not-allowed;
       }
       .btn.secondary {
-        background: linear-gradient(90deg, #0f766e, var(--accent-2));
+        background: linear-gradient(90deg, #2563eb, var(--accent-2));
       }
       .button-row {
         display: flex;
@@ -102,13 +108,13 @@
         display: inline-block;
         padding: 4px 10px;
         border-radius: 999px;
-        background: #0f1525;
+        background: #111827;
         border: 1px solid var(--border);
         color: var(--muted);
         font-size: 12px;
       }
       code {
-        background: #0f1525;
+        background: #111827;
         border: 1px solid var(--border);
         border-radius: 7px;
         padding: 1px 6px;
@@ -128,7 +134,7 @@
         text-align: left;
       }
       table.metrics th {
-        background: #0f1525;
+        background: #111827;
       }
       .chart-controls {
         display: grid;
@@ -151,14 +157,14 @@
         color: var(--muted);
       }
       .field select {
-        background: #0f1525;
+        background: #111827;
         border: 1px solid var(--border);
         color: var(--text);
         border-radius: 8px;
         padding: 8px;
       }
       .chart-wrap {
-        background: #0f1525;
+        background: #111827;
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 10px;
@@ -555,12 +561,12 @@
 
       function chartPalette(index) {
         const colors = [
-          "rgba(111, 66, 193, 0.85)",
-          "rgba(14, 138, 22, 0.85)",
-          "rgba(215, 58, 73, 0.85)",
-          "rgba(31, 111, 235, 0.85)",
-          "rgba(251, 133, 0, 0.85)",
-          "rgba(130, 80, 223, 0.85)"
+          "rgba(59, 130, 246, 0.85)",
+          "rgba(255, 245, 0, 0.85)",
+          "rgba(100, 116, 139, 0.85)",
+          "rgba(96, 165, 250, 0.85)",
+          "rgba(37, 99, 235, 0.85)",
+          "rgba(148, 163, 184, 0.85)"
         ];
         return colors[index % colors.length];
       }
@@ -568,17 +574,17 @@
       function withScales(type) {
         if (type === "bar" || type === "line") {
           return {
-            x: { ticks: { color: "#a8b1c9" }, grid: { color: "#2c3753" } },
-            y: { ticks: { color: "#a8b1c9" }, grid: { color: "#2c3753" } }
+            x: { ticks: { color: "#9ca3af" }, grid: { color: "#1f2937" } },
+            y: { ticks: { color: "#9ca3af" }, grid: { color: "#1f2937" } }
           };
         }
         if (type === "radar") {
           return {
             r: {
-              angleLines: { color: "#2c3753" },
-              grid: { color: "#2c3753" },
-              pointLabels: { color: "#a8b1c9" },
-              ticks: { color: "#a8b1c9", backdropColor: "transparent" }
+              angleLines: { color: "#1f2937" },
+              grid: { color: "#1f2937" },
+              pointLabels: { color: "#9ca3af" },
+              ticks: { color: "#9ca3af", backdropColor: "transparent" }
             }
           };
         }
@@ -756,12 +762,12 @@
             responsive: true,
             plugins: {
               legend: {
-                labels: { color: "#e8ecf8" }
+                labels: { color: "#e5e7eb" }
               },
               title: {
                 display: true,
                 text: preset.title,
-                color: "#e8ecf8"
+                color: "#e5e7eb"
               }
             },
             scales: withScales(preset.type)
