@@ -599,6 +599,16 @@ Every badge links to the official docs; each group lists plain-text keywords for
 
 ---
 
+## 📝 Engineering Log
+
+**Latest:** [Instrument Bugs: When the Code Works and the Numbers Lie](articles/2026-08-02-instrument-bugs.md) — _2026-08-02_
+
+Four measurement failures found in a single day of commits: an autosave that erased its own completion flag, a growth loop optimizing for link-preview crawlers, a market denominator padded with chain retailers, and the case for leaving a column `NULL`.
+
+_All entries: [`articles/`](articles/README.md)._
+
+---
+
 ## 🏆 Featured Projects & Portfolio
 
 <div align="center">
